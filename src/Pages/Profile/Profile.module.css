@@ -1,0 +1,17 @@
+/* ProfileTabs.module.css */
+.profile-tab {
+  color: #a8a8a8;
+  text-decoration: none;
+}
+
+.profile-tab-active {
+  color: white;
+}
+
+.btnProfileHeader:hover {
+  background-color: rgba(38, 38, 38, 255);
+}
+
+.btnProfileHeader {
+  background-color: rgba(54, 54, 54, 255);
+}

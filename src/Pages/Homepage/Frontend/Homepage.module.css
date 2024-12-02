@@ -1,0 +1,58 @@
+.logoInstagram {
+  display: none;
+}
+
+.listOptionsSideBar {
+  display: none;
+}
+
+@media screen and (min-width: 1300px) {
+  .logoInstagram {
+    display: block;
+  }
+
+  .miniLogo {
+    display: none;
+  }
+  .listOptionsSideBar {
+    display: block;
+  }
+}
+
+.active {
+  color: dark;
+}
+
+@media screen and (max-width: 1300px) {
+  .sidebar {
+    max-width: 7.2rem !important;
+  }
+
+  .sidebarList {
+    display: flex;
+
+    justify-content: center;
+  }
+
+  .lowerSidebar {
+    display: flex;
+    align-items: center;
+  }
+
+  .divLowerSidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 1160px) {
+  .rightSection {
+    display: none !important;
+  }
+}
+@media screen and (max-height: 730px) {
+  .threads {
+    display: none !important;
+  }
+}

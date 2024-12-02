@@ -1,0 +1,20 @@
+/* Tema claro
+.light-theme {
+  vc: white;
+  --text-color: black;
+}
+
+/* Tema escuro */
+/* .dark-theme {
+  --background-color: black;
+  --text-color: white;
+  width: 100%;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+button {
+  margin-top: 10px; */
