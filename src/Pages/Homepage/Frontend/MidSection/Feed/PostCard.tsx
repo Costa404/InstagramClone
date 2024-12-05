@@ -32,9 +32,9 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
       />
       <PostImage imageUrl={post.imageUrl} />
       <Card.Body className="w-100 p-0 d-flex flex-column gap-2">
-        <PostActions />
+        <PostActions postData={post} />
         <PostLikesAndDescription
-          likes={post.likesCount}
+          postData={post}
           userName={post.userName as string}
           description={post.description as string}
         />

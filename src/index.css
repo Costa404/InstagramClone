@@ -115,3 +115,7 @@ textarea::placeholder {
 .paddingLeftProfileUl {
   padding-left: 0px !important;
 }
+
+.overflowX {
+  overflow: hidden !important;
+}

@@ -29,7 +29,7 @@ const UserItem: FC<UserItemProps> = ({
           src={user.profileImg}
           alt={user.userName}
           style={{ maxWidth: "4.4rem", maxHeight: "4.4rem" }}
-          className="rounded-circle hov"
+          className="rounded-circle hover"
         />
         <div className="d-flex flex-column">
           <h1 onClick={() => onClick?.(user)} className="fs-4 text-white">

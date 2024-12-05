@@ -8,10 +8,47 @@ import { useCurrentUser } from "../../../../../../useContext/currentUserContext/
 type PostHeaderProps = {
   userName: string;
   createdAt?: Date;
+  fullName?: string;
+  bio?: string;
+  profileImg?: string;
+  followersCount?: number;
+  followingCount?: number;
+  postsCount?: number;
 };
 
-const PostHeader: React.FC<PostHeaderProps> = ({ userName, createdAt }) => {
+const PostHeader: React.FC<PostHeaderProps> = ({
+  userName,
+  createdAt,
+  // fullName,
+  // bio,
+  // followersCount,
+  // postsCount,
+  // followingCount,
+  // profileImg,
+}) => {
   const { currentUserId } = useCurrentUser();
+  // const { setSelectedUser } = useSelectedUser();
+  // const navigate = useNavigate();
+  // const handleClick = () => {
+  //   if (setSelectedUser) {
+  //     const user: User = {
+  //       fullName,
+  //       userName,
+  //       bio,
+  //       profileImg,
+  //       followersCount,
+  //       followingCount,
+  //       postsCount,
+  //     };
+
+  //     console.log("Selected User:", user); // Depure para confirmar os dados
+  //     setSelectedUser(user);
+  //     navigate(`/homepage/${user.userName}`);
+  //   } else {
+  //     console.error("setSelectedUser is null");
+  //   }
+  // };
+
   return (
     <Card.Body className="w-100 p-0 d-flex align-items-center  justify-content-between  ">
       <div className="d-flex">

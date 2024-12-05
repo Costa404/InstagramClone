@@ -41,7 +41,7 @@ export const useGetNumberPosts = () => {
     };
     fetchPostsCount();
   }, [currentUserId]);
-  console.log("origin currentUserId:", currentUserId);
-  console.log("origin countPosts:", countPosts);
+  // console.log("origin currentUserId:", currentUserId);
+  // console.log("origin countPosts:", countPosts);
   return { countPosts };
 };

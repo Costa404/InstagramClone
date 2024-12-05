@@ -40,19 +40,21 @@ const createPostsForExistingFakeUsers = async () => {
       const postsPerUser = Math.floor(Math.random() * 3); // Gera de 0 a 6
 
       for (let i = 0; i < postsPerUser; i++) {
+        const postId = `${userName}_post_${i + 1}`;
         const fakePost: PostData = {
-          userId: userName, // Relaciona com o username
+          userId: userName,
           imageUrl: faker.image.url(),
           description: faker.lorem.sentence(),
-          createdAt: Timestamp.fromDate(new Date()), // Usa o Timestamp do Firestore
-          likesCount: Math.floor(Math.random() * 100), // Número aleatório de likes
-          comments: faker.lorem.sentence(), // Comentários aleatórios
-          location: faker.address.city(), // Localização aleatória
-          userName: userName, // Nome do usuário
+          createdAt: Timestamp.fromDate(new Date()),
+          likesCount: Math.floor(Math.random() * 100),
+          comments: faker.lorem.sentence(),
+          location: faker.address.city(),
+          userName: userName,
+          postId: postId,
         };
 
         // Define manualmente o ID do documento com base no userName e um índice único
-        const postId = `${userName}_post_${i + 1}`;
+
         await setDoc(doc(postsCollection, postId), fakePost);
         console.log(
           `Post criado com ID ${postId} para o fake user: ${userName}`

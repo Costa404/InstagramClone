@@ -2,7 +2,7 @@ import { Timestamp } from "firebase/firestore";
 
 export interface User {
   userId?: string;
-  email: string;
+  email?: string;
   createdAt?: Date;
   fullName: string;
   userName: string;
@@ -15,6 +15,7 @@ export interface User {
 }
 
 export interface PostData {
+  postId: string;
   userId: string;
   imageUrl: string;
   description: string | null;

@@ -13,7 +13,8 @@ export const usePostCollection = () => {
       }
 
       // Cria uma referência ao documento com base no userName
-      const postDocRef = doc(db, "posts", currentUserId.userName);
+      // Cria o ID customizado
+      const postDocRef = doc(db, "posts", postData.postId); // Usa o ID customizado no Firestore
 
       // Adiciona os dados do post ao Firestore
       await setDoc(postDocRef, {

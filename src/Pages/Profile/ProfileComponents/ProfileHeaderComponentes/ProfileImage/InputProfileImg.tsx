@@ -1,14 +1,11 @@
-import { useImgUploadContext } from "../../../../../useContext/ImgUploadContext/ImgUploadContext";
-import { useImgUpload } from "../../../../../SharedComponents/ImageLogic/UserImg/useImgUpload";
 import { useProfileImage } from "./useProfileImage";
 import ProfileImg from "./ProfileImg";
-import { useCurrentUser } from "../../../../../useContext/currentUserContext/currentUserContext";
+
+import { useSelectedUser } from "../../../../../useContext/SelectedUserContext";
 
 const UploadProfileImg = () => {
-  const { uploading } = useImgUpload();
-  const { selectedImg } = useImgUploadContext();
+  const { selectedUser } = useSelectedUser();
 
-  const { currentUserId } = useCurrentUser();
   const { handleImageClick, handleImageSelection, inputRef } =
     useProfileImage();
 
@@ -20,22 +17,21 @@ const UploadProfileImg = () => {
         ref={inputRef}
         style={{ display: "none" }}
         onChange={handleImageSelection}
-        disabled={uploading}
       />
-      {selectedImg ? (
-        <ProfileImg userId={currentUserId?.userName as string} />
-      ) : (
-        <img
-          src="/path/to/default-profile-image.jpg"
-          alt="Default Profile"
-          style={{
-            width: "150px",
-            height: "150px",
-            borderRadius: "50%",
-            objectFit: "cover",
-          }}
-        />
-      )}
+
+      <ProfileImg userId={selectedUser?.userName as string} />
+
+      {/* <img
+        src={defaultPic}
+        alt="Default Profile"
+        className="hover"
+        style={{
+          width: "150px",
+          height: "150px",
+          borderRadius: "50%",
+          objectFit: "cover",
+        }}
+      /> */}
     </div>
   );
 };

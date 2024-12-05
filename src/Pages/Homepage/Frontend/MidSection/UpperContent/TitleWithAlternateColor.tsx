@@ -3,7 +3,7 @@ import { useTheme } from "../../../../../useContext/ThemeContext/ThemeContext";
 
 interface TitleProps {
   title1: string;
-  title2: string;
+  title2?: string;
 }
 
 export const TitleWithAlternateColor: React.FC<TitleProps> = ({

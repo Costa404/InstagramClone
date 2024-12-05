@@ -42,11 +42,11 @@ export const useAppRoutes = () => {
       element: <LazyCreateAccount />,
       errorElement: <CustomErrorPage />,
     },
-    {
-      path: "/usersSuggestion",
-      element: <LazySuggestionUsers />,
-      errorElement: <CustomErrorPage />,
-    },
+    // {
+    //   path: "/usersSuggestion",
+    //   element: <LazySuggestionUsers />,
+    //   errorElement: <CustomErrorPage />,
+    // },
     {
       path: `/${currentUserId?.userName}`,
       element: <LazySuggestionUsers />,

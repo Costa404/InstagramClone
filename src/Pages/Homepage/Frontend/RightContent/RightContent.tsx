@@ -3,16 +3,20 @@ import React from "react";
 import FollowSugestion from "../RightContent/UsersDisplay/FollowSugestion";
 import style from "../Homepage.module.css";
 import FooterLinks from "./FooterLinks";
-import { useCurrentUser } from "../../../../useContext/currentUserContext/currentUserContext";
+
 import ProfileImg from "../../../Profile/ProfileComponents/ProfileHeaderComponentes/ProfileImage/ProfileImg";
 
+import { useCurrentUser } from "../../../../useContext/currentUserContext/currentUserContext";
+
 type RightContentProps = {
-  userProfileImage: string;
-  userName: string;
+  userProfileImage?: string;
+  userName?: string;
 };
 
 const RightContent: React.FC<RightContentProps> = () => {
   const { currentUserId } = useCurrentUser();
+
+  console.log("currentUserId", currentUserId?.userName);
 
   return (
     <section
@@ -21,7 +25,7 @@ const RightContent: React.FC<RightContentProps> = () => {
     >
       <div className="d-flex gap-3  ">
         <ProfileImg
-          userId={currentUserId?.profileImg as string}
+          userId={currentUserId?.userName as string}
           style={{ width: "4.4rem", height: "4.4rem" }}
         />
         <div className="d-flex justify-content-between align-items-center  w-100 ">

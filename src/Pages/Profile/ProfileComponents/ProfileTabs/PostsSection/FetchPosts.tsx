@@ -3,11 +3,13 @@ import { useCurrentUser } from "../../../../../useContext/currentUserContext/cur
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../../../../firebase";
 import { PostData } from "../../../../../SharedComponents/Interface/Interface";
+import { useParams } from "react-router-dom";
 
 export const useFetchPosts = () => {
   const { currentUserId } = useCurrentUser();
   const [posts, setPosts] = useState<PostData[] | undefined>(undefined);
-
+  const { username } = useParams();
+  console.log("username", username);
   useEffect(() => {
     const fetchPostsFirebase = async () => {
       if (!currentUserId) {
@@ -21,13 +23,8 @@ export const useFetchPosts = () => {
       }
 
       try {
-        console.log("Fetching posts for userId:", currentUserId?.userName);
-
         const postRef = collection(db, "posts");
-        const q = query(
-          postRef,
-          where("userName", "==", currentUserId?.userName)
-        );
+        const q = query(postRef, where("userName", "==", username));
         const querySnapShot = await getDocs(q);
 
         console.log(
@@ -49,6 +46,7 @@ export const useFetchPosts = () => {
             likesCount: data.likesCount || 0,
             comments: data.comments || "",
             location: data.location || null,
+            postId: data.postId,
           } as PostData;
         });
 
@@ -59,7 +57,7 @@ export const useFetchPosts = () => {
     };
 
     fetchPostsFirebase();
-  }, []);
+  }, [username]);
 
   return { posts };
 };

@@ -34,7 +34,6 @@ const LoginForm: React.FC = () => {
         placeholder="Enter your password"
         label="Password"
       />
-      <p></p>
 
       <Button
         type="submit"

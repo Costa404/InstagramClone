@@ -55,7 +55,7 @@ const PostsSection = () => {
             </div>
 
             <div className="p-4 ">
-              <p className="fs-4"> {selectedPost?.caption}</p>
+              <p className="fs-4"> {selectedPost?.description}</p>
               <p>
                 {selectedPost?.likesCount ? (
                   selectedPost.likesCount
@@ -91,7 +91,7 @@ const PostsSection = () => {
           {/* Renderizando a imagem */}
           <img
             src={post.imageUrl}
-            alt={post.caption || "Post image"}
+            alt={post.description || "Post image"}
             style={{
               width: "30.76rem",
               height: "30.7rem",

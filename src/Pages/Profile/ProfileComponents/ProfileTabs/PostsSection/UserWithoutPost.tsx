@@ -1,4 +1,3 @@
-import React from "react";
 import { IoCameraOutline } from "react-icons/io5";
 
 const UserWithoutPost = () => {

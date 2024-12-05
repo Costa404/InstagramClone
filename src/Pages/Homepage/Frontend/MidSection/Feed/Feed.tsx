@@ -39,7 +39,9 @@ const Feed: React.FC = () => {
   return (
     <div>
       {posts.length > 0 ? (
-        posts.map((post) => <PostCard key={post.postId} post={post} />)
+        posts.map((post) => (
+          <PostCard key={`post.userName-${Math.random() * 10}`} post={post} />
+        ))
       ) : (
         <div>Não há posts para mostrar.</div>
       )}

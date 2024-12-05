@@ -9,10 +9,12 @@ import { GoHomeFill } from "react-icons/go";
 import { useCurrentUser } from "../../../useContext/currentUserContext/currentUserContext";
 import { saveFakeUsersToFirebase } from "../../FakeUsers/saveFakeUsersFirebase";
 import ProfileImg from "../../../Pages/Profile/ProfileComponents/ProfileHeaderComponentes/ProfileImage/ProfileImg";
+import { useSelectedUser } from "../../../useContext/SelectedUserContext";
 
 // Hook personalizado para criar menuOptions
 export const useMenuOptions = () => {
   const { currentUserId } = useCurrentUser();
+  const { selectedUser } = useSelectedUser();
 
   const menuOptions = [
     { name: "Home", icon: <GoHomeFill className="fs-2" />, path: "/Homepage" },
@@ -47,7 +49,7 @@ export const useMenuOptions = () => {
       name: "Profile",
       icon: (
         <ProfileImg
-          userId={currentUserId?.profileImg as string}
+          userId={selectedUser?.userName as string}
           style={{ width: "2.4rem", height: "2.4rem" }}
         />
       ),

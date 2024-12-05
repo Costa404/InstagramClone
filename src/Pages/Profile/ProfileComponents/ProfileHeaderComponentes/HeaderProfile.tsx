@@ -14,6 +14,8 @@ const HeaderProfile = () => {
 
   console.log("selectedUser", selectedUser);
 
+  if (!selectedUser) return;
+
   return (
     <section
       className="mt-5  d-flex gap-5 flex-column border-bottom border-dark"

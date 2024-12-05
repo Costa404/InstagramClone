@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 
 import { useError } from "../../../../../useContext/errorContext/useError";
-import { useState } from "react";
 
-import { useCheckEmail } from "./useCheckEmail";
-import { useCheckUserName } from "./useCheckUserName";
 import useSignupLogic from "./useSignup";
 import { useSignupProvider } from "../../../../../useContext/useSignupContext/useSignupCredentialsContext";
+import { useState } from "react";
+import { useCheckUserName } from "./useCheckUserName";
+import { useCheckEmail } from "./useCheckEmail";
 
 interface ErrorState {
   userName: string;
@@ -65,17 +65,14 @@ export const useHandleSubmitSignup = () => {
       }
 
       // Verifica se houve erros
-      if (hasErrors) {
-        return; // Interrompe se houver erros de validação
+      if (!hasErrors) {
+        setError(""); // Limpa qualquer erro global
+        const signUpSuccess = await handleSignUp(); // Chama a função de sign-up
+        if (signUpSuccess) {
+          console.log("handleSignUp concluído. Redirecionando para /homepage");
+          navigate("/homepage"); // Redireciona para homepage após sucesso
+        }
       }
-
-      // Limpa o erro se não houver problemas e realiza o sign-up
-      setError(""); // Limpa qualquer erro global
-      await handleSignUp(); // Chama a função de sign-up
-      console.log(
-        "handleSignUp concluído. Redirecionando para /usersSuggestion"
-      );
-      navigate("/usersSuggestion"); // Redireciona para homepage após sucesso
     } catch (error) {
       console.error("Error during sign-up:", error);
       setError("An unexpected error occurred. Please try again.");

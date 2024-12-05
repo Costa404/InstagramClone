@@ -1,12 +1,11 @@
 import { arrayUnion, doc, updateDoc, getDoc } from "firebase/firestore";
 import { db } from "../../../firebase";
-import { useNavigate } from "react-router-dom";
+
 import { useCurrentUser } from "../../../useContext/currentUserContext/currentUserContext";
 import { useFollowUserIdContext } from "../../../useContext/FollowUserIdContext/FollowUserIdContext";
 import { useEffect } from "react";
 
 export const useFollowUser = () => {
-  const navigate = useNavigate();
   const { currentUserId } = useCurrentUser();
 
   const { followUserId } = useFollowUserIdContext();
@@ -51,8 +50,7 @@ export const useFollowUser = () => {
         const updatedUserDoc = await getDoc(userRef);
 
         if (updatedUserDoc.exists()) {
-          const followingList = updatedUserDoc.data()?.following;
-
+          // const followingList = updatedUserDoc.data()?.following;
           // Verifique a lista de 'following' do usuário
           // if (followingList && followingList.length >= 5) {
           //   navigate("/homepage"); // Redirecionar se o número de 'followings' for >= 5

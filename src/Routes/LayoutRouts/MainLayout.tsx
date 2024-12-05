@@ -6,8 +6,12 @@ import Footer from "../../Pages/Authentication/SharedComponentes/Footer";
 
 const MainLayout = () => (
   <div
-    className="app-layout d-flex   "
-    style={{ zIndex: "2", maxWidth: "85%", overflowX: "hidden" }}
+    className="app-layout d-flex overflowX   "
+    style={{
+      zIndex: "2",
+      // maxWidth: "85%",
+      overflowX: "hidden",
+    }}
   >
     <Sidebar />
     <div className="main-content  w-100">
