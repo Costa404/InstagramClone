@@ -5,6 +5,7 @@ import Step2 from "./StepsCreationPost/Step2";
 
 import { useUtilitysSteps } from "./StepsCreationPost/useUtilitysSteps";
 import { useImgUploadContext } from "../../useContext/ImgUploadContext/ImgUploadContext";
+import { useNavigate } from "react-router-dom";
 
 const CreatePost = () => {
   const [step, setStep] = useState(1);
@@ -12,6 +13,7 @@ const CreatePost = () => {
   const { setSelectedImg } = useImgUploadContext();
 
   const { showStep2 } = useUtilitysSteps();
+  const navigate = useNavigate();
 
   const nextStep = () => {
     setStep((prev) => prev + 1);
@@ -20,6 +22,7 @@ const CreatePost = () => {
   const prevStep = () => setStep((prev) => Math.max(prev - 1, 1));
   const closeModal = () => {
     setIsModalOpen(false);
+    navigate("/homepage");
   };
 
   return (
@@ -40,7 +43,7 @@ const CreatePost = () => {
           className="d-flex justify-content-end w-100 "
           style={{ height: "auto" }}
         >
-          <IoMdClose className="fs-1" onClick={closeModal} />
+          <IoMdClose className="fs-1 hover" onClick={closeModal} />
         </div>
         <div
           className="d-flex justify-content-center    "

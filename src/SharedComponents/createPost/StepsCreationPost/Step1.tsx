@@ -1,7 +1,8 @@
 import React from "react";
 import { GoFileMedia } from "react-icons/go";
-import Title from "./title";
+
 import { useTheme } from "../../../useContext/ThemeContext/ThemeContext";
+import TitleCreatePost from "./TitleCreatePost";
 
 type Step1Props = {
   nextStep: () => void;
@@ -25,7 +26,7 @@ const Step1: React.FC<Step1Props> = ({ nextStep, setSelectedImg }) => {
       className="w-100 h-100 d-flex justify-content-center align-items-center flex-column  "
       style={{ minHeight: "100vh" }}
     >
-      <Title Title="Create new post" />
+      <TitleCreatePost title="Create new post" />
       <div
         style={{
           background: theme === "dark" ? "#262626" : "white",

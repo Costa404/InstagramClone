@@ -1,11 +1,9 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-
 import PostHeader from "./PostComponents/PostHeader";
 import PostImage from "./PostComponents/PostImage";
 import PostActions from "./PostComponents/PostActions";
 import PostLikesAndDescription from "./PostComponents/PostLikesAndDescription";
-
 import { useTheme } from "../../../../../useContext/ThemeContext/ThemeContext";
 import { PostData } from "../../../../../SharedComponents/Interface/Interface";
 

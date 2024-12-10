@@ -6,6 +6,8 @@ export const useUtilitysSteps = () => {
   const [showStep4, setShowStep4] = useState(false);
   const [collabs, setCollabs] = useState("");
   const [showStep2, setShowStep2] = useState(true);
+  const [isSharing, setIsSharing] = useState(false);
+  const [showStep3, setShowStep3] = useState(false);
 
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
 
@@ -54,5 +56,9 @@ export const useUtilitysSteps = () => {
     setShowStep4,
     showStep2,
     setShowStep2,
+    isSharing,
+    setIsSharing,
+    showStep3,
+    setShowStep3,
   };
 };

@@ -54,16 +54,13 @@ export const useHandleSharePost = () => {
           postId: postId,
         };
 
-        await postCollection(postData); // Passe o objeto criado
-        alert("Post created successfully!");
+        await postCollection(postData);
 
-        // Limpar campos ou redirecionar
         setDescription("");
         setLocation("");
       }
     } catch (error) {
       console.error("Error creating post:", error);
-      alert("Failed to create post.");
     }
   };
 
