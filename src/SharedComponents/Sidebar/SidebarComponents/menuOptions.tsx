@@ -17,7 +17,11 @@ export const useMenuOptions = () => {
   const { selectedUser } = useSelectedUser();
 
   const menuOptions = [
-    { name: "Home", icon: <GoHomeFill className="fs-2" />, path: "/Homepage" },
+    {
+      name: "Home",
+      icon: <GoHomeFill data-testid="cypress-hrefHome" className="fs-2" />,
+      path: "/homepage",
+    },
     {
       name: "Search",
       icon: <IoSearchSharp className="fs-2" />,

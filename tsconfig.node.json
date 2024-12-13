@@ -16,7 +16,15 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "typeRoots": ["./src/types", "./types"]
   },
-  "include": ["vite.config.ts"]
+  "include": [
+    "vite.config.ts",
+    "cypress.config.mjs",
+    "cypress/**/*.ts",
+    "src/**/*.ts",
+    "src/@types/**/*.d.ts",
+    "globals.d.ts"
+  ]
 }

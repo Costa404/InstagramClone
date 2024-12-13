@@ -27,8 +27,7 @@ const ProfileImg: React.FC<ProfileImageProps> = ({
         }
 
         // // Busca a URL da imagem no Firebase
-        // const url = await getProfileImage(userId);
-        const url = "ola";
+        const url = await getProfileImage();
 
         if (url) {
           localStorage.setItem(`profileImage_${userId}`, url);
@@ -44,6 +43,7 @@ const ProfileImg: React.FC<ProfileImageProps> = ({
 
     fetchProfileImage();
   }, [userId, getProfileImage]); // Atualiza a lógica ao mudar o userId
+  console.log("profileImage", profileImageUrl);
 
   return (
     <div onClick={onClick}>
@@ -52,6 +52,7 @@ const ProfileImg: React.FC<ProfileImageProps> = ({
           src={profileImageUrl}
           className="hover"
           alt="Profile"
+          data-testid="cypress-Profile"
           style={{
             width: "150px",
             height: "150px",
@@ -79,3 +80,6 @@ const ProfileImg: React.FC<ProfileImageProps> = ({
 };
 
 export default ProfileImg;
+
+console.log("localStorage", localStorage);
+localStorage.clear();

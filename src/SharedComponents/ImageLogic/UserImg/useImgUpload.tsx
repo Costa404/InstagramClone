@@ -19,7 +19,7 @@ export const useImgUpload = () => {
   // Função para gerar a chave única com base no tipo de imagem
   const generateImageKey = (imageType: "profile" | "post") => {
     if (imageType === "profile") {
-      return `profileImages/${currentUserId?.userName}-${fileName}`; // Para imagem de perfil
+      return `profileImages/${currentUserId?.userName}`; // Para imagem de perfil
     }
     return `postImages/${selectedUser?.userName}-${fileName}`; // Para imagem de post
   };
