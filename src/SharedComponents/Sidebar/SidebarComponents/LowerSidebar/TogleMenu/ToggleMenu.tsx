@@ -17,18 +17,17 @@ export const ToggleMenu = () => {
   const [showSwitchAppearance, setShowSwitchAppearance] = useState(false);
 
   const handleSwitchAppearanceClick = () => {
-    setShowSwitchAppearance(true); // Abre a mini-div SwitchAppearance
-    close(); // Fecha o menu principal
+    setShowSwitchAppearance(true);
+    close();
   };
 
   const closeSwitchAppearance = () => {
     setShowSwitchAppearance(false);
-    toggleVisibility(); // Reabre o menu principal
+    toggleVisibility();
   };
 
   return (
     <div className="hover d-flex justify-content-start align-items-center rounded rounded-3 position-relative">
-      {/* Menu principal */}
       {isVisible && (
         <div
           className="position-absolute p-3 my-2 rounded-4"
@@ -53,7 +52,7 @@ export const ToggleMenu = () => {
               <FaRegBookmark className="fs-1" />
               <p className="fs-4">Saved</p>
             </li>
-            {/* Switch Appearance */}
+
             <li
               className="list-unstyled d-flex gap-3"
               onClick={handleSwitchAppearanceClick}
@@ -75,14 +74,12 @@ export const ToggleMenu = () => {
         </div>
       )}
 
-      {/* Mini-div SwitchAppearance */}
       {showSwitchAppearance && (
         <div className="position-absolute" style={{ zIndex: "1001" }}>
           <SwitchAppearance closeMainDiv={closeSwitchAppearance} />
         </div>
       )}
 
-      {/* Toggle do menu */}
       <a
         onClick={toggleVisibility}
         className="align-items-center d-flex w-100 fs-2 hover rounded rounded-3 w-100"

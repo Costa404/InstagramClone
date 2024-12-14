@@ -23,7 +23,6 @@ const CentralContent = () => {
         <Feed />
       </div>
       <RightContent />
-      {/* <ThemeApp /> */}
     </div>
   );
 };

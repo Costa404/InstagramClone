@@ -2,14 +2,12 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
 import { User } from "../SharedComponents/Interface/Interface";
 
-// Defina a interface do contexto
 interface SelectedUserContextType {
   selectedUser: User | null;
   setSelectedUser: (user: User | null) => void;
   clearSelectedUser: () => void;
 }
 
-// Crie o contexto com um valor inicial
 const SelectedUserContext = createContext<SelectedUserContextType | undefined>(
   undefined
 );
@@ -21,7 +19,7 @@ export const SelectedUserProvider: React.FC<{ children: ReactNode }> = ({
 
   const clearSelectedUser = () => {
     console.log("Clearing selected user...");
-    setSelectedUser(null); // Reseta o estado do selectedUser
+    setSelectedUser(null);
   };
 
   return (

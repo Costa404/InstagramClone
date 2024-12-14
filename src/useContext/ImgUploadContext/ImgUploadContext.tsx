@@ -1,4 +1,3 @@
-// ImgUploadProvider.tsx
 import React, { createContext, useContext, useState } from "react";
 
 type ImgUploadContextType = {
@@ -21,8 +20,6 @@ export const ImgUploadProvider: React.FC<{ children: React.ReactNode }> = ({
       {children}
     </ImgUploadContext.Provider>
   );
-
-  // Exemplo de log no contexto
 };
 
 export const useImgUploadContext = () => {

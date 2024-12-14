@@ -6,15 +6,15 @@ export const generateFakeUsers = (num: number): User[] => {
 
   for (let i = 0; i < num; i++) {
     fakeUsers.push({
-      userName: faker.internet.userName(), // Gera um username único
-      fullName: faker.person.fullName(), // Gera um nome completo fictício
+      userName: faker.internet.userName(),
+      fullName: faker.person.fullName(),
       profileImg: `https://i.pravatar.cc/150?img=${Math.floor(
         Math.random() * 70
-      )}`, // Gera uma URL de imagem de perfil do Pravatar
-      bio: faker.lorem.sentence(), // Gera uma biografia fictícia
-      followersCount: faker.number.int({ min: 0, max: 1000 }), // Gera um número aleatório de seguidores
-      followingCount: faker.number.int({ min: 0, max: 500 }), // Gera um número aleatório de seguindo
-      postsCount: faker.number.int({ min: 0, max: 100 }), // Gera um número aleatório de posts
+      )}`,
+      bio: faker.lorem.sentence(),
+      followersCount: faker.number.int({ min: 0, max: 1000 }),
+      followingCount: faker.number.int({ min: 0, max: 500 }),
+      postsCount: faker.number.int({ min: 0, max: 100 }),
       email: faker.internet.email(),
     });
   }

@@ -18,7 +18,7 @@ export const useCheckIsFollowing = () => {
       if (userSnap.exists()) {
         const userData = userSnap.data();
         const following = userData?.following || [];
-        return following.includes(followUserId); // Verifica se o userId está no array de following
+        return following.includes(followUserId);
       } else {
         return false;
       }

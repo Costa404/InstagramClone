@@ -18,7 +18,7 @@ export const useCheckUserName = () => {
 
       const querySnapshot = await getDocs(userQuery);
 
-      console.log("QuerySnapshot:", querySnapshot); // Add this log statement
+      console.log("QuerySnapshot:", querySnapshot);
 
       if (!querySnapshot.empty) {
         console.log("Username is already in use.");

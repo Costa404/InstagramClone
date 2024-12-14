@@ -2,12 +2,12 @@ import React from "react";
 import { useTheme } from "../../../../../useContext/ThemeContext/ThemeContext";
 
 interface InputFieldProps {
-  type: string; // Tipo do input (e.g., "text", "email", "password")
-  id: string; // ID do input
-  value: string; // Valor atual do input
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void; // Função de mudança
-  placeholder: string; // Placeholder do input
-  label: string; // Rótulo do input
+  type: string;
+  id: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  placeholder: string;
+  label: string;
 }
 
 const InputField: React.FC<InputFieldProps> = ({

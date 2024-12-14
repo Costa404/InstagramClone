@@ -2,7 +2,7 @@ import { IoLocationOutline } from "react-icons/io5";
 
 import { FaUserFriends } from "react-icons/fa";
 import { MdOutlineEmojiEmotions } from "react-icons/md";
-import EmojiPicker from "emoji-picker-react"; // Nova importação
+import EmojiPicker from "emoji-picker-react";
 // import { useHandleSharePost } from "../useHandleSharePost";
 import { useCurrentUser } from "../../../useContext/currentUserContext/currentUserContext";
 import { useTheme } from "../../../useContext/ThemeContext/ThemeContext";
@@ -81,7 +81,6 @@ const Step3 = () => {
         {showEmojiPicker && (
           <div style={{ position: "absolute", bottom: "10%", zIndex: 1000 }}>
             <EmojiPicker onEmojiClick={handleEmojiSelect} />{" "}
-            {/* Substituído o Picker */}
           </div>
         )}
       </div>

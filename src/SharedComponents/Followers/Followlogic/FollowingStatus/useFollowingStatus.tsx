@@ -16,7 +16,6 @@ export const useFollowingStatus = () => {
       if (followUserId) {
         const status = await checkIsFollowing();
 
-        // Atualizar apenas se o estado local for diferente do estado recuperado
         if (status !== localStatus) {
           setIsFollowing(followUserId as string, status);
           setLocalStatus(status);
@@ -27,7 +26,6 @@ export const useFollowingStatus = () => {
     fetchFollowingStatus();
   }, [checkIsFollowing, followUserId, setIsFollowing, localStatus]);
 
-  // Log para depuração do status de seguimento atual
   useEffect(() => {
     if (followUserId && isFollowing[followUserId as string] !== undefined) {
       if (isFollowing[followUserId as string]) {

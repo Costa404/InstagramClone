@@ -7,22 +7,19 @@ import { useError } from "../../../useContext/errorContext/useError";
 import { useLoginProvider } from "../../../useContext/useLoginCredentialsContext/useLoginCredentialsContext";
 import { useUserIdContext } from "../../../useContext/userContext/userIdContext";
 
-// import { handlePrivateKey } from "../../chat/hooksChat/EncryptFiles/generateKeyPair";
-
 const useLogin = () => {
   const navigate = useNavigate();
   const { setError } = useError();
-  const { setUserId } = useUserIdContext(); // Get setUserId from useUser
+  const { setUserId } = useUserIdContext();
   const { emailLogin, passwordLogin } = useLoginProvider();
 
   const handleLogin = async (
     e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>
   ) => {
     e.preventDefault();
-    setError(null); // Clear previous errors
+    setError(null);
 
     try {
-      // Attempt login with email and password
       const userCredential = await signInWithEmailAndPassword(
         auth,
         emailLogin,
@@ -44,17 +41,16 @@ const useLogin = () => {
       const userDoc = await getDoc(doc(db, "users", user.email));
       if (userDoc.exists()) {
         const userData = userDoc.data();
-        console.log("User document data:", userData); // Log the document data
 
-        const customUserID = userData?.userId || null; // Ensure field name is correct
+        console.log("User document data:", userData);
+
+        const customUserID = userData?.userId || null;
         if (customUserID) {
           console.log("Setting userId in context:", customUserID);
           setUserId(customUserID);
 
           console.log("UserID has been set in context:", customUserID);
           navigate("/homepage");
-
-          // Navigate to homepage after setting userId
         } else {
           console.error("Custom UserID not found in user document data.");
         }

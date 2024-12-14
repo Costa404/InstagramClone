@@ -35,13 +35,11 @@ export const useUtilitysSteps = () => {
 
   const handleEmojiClick = (emoji: { native: string }) => {
     setDescription((prevDescription) => prevDescription + emoji.native);
-    setShowEmojiPicker(false); // Fecha o picker após selecionar o emoji
+    setShowEmojiPicker(false);
   };
   const handleEmojiSelect = (emojiObject: { emoji: string }) => {
-    const emojiSymbol = emojiObject.emoji; // Aqui você deve garantir que `emoji` é a propriedade correta
-
-    // Adiciona o emoji ao estado `description`
-    handleEmojiClick({ native: emojiSymbol }); // Passe o emoji como objeto com a propriedade `native`
+    const emojiSymbol = emojiObject.emoji;
+    handleEmojiClick({ native: emojiSymbol });
   };
 
   return {

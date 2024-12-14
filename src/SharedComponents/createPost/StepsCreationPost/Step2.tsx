@@ -61,7 +61,7 @@ const Step2 = ({ prevStep }: Step2Props) => {
     } catch (error) {
       console.error("Erro ao compartilhar:", error);
     } finally {
-      setIsSharing(false); // Finaliza o estado de execução
+      setIsSharing(false);
     }
   };
 
@@ -69,7 +69,7 @@ const Step2 = ({ prevStep }: Step2Props) => {
     <div
       style={{
         height: "100vh",
-        minWidth: "50vw", // Ajuste a altura conforme necessário
+        minWidth: "50vw",
       }}
       className="d-flex flex-column justify-content-center  align-items-center "
     >

@@ -1,15 +1,14 @@
 import generateFakeUsers from "./generateFakeUsers";
 
-// Função para adicionar usuários ao Firestore
 export const saveFakeUsersToFirebase = async (numUsers: number) => {
-  const users = generateFakeUsers(numUsers); // Gera usuários falsos
-  console.log(`Generating ${numUsers} fake users:`, users); // Log dos usuários gerados
+  const users = generateFakeUsers(numUsers);
+  console.log(`Generating ${numUsers} fake users:`, users);
 
   for (const user of users) {
-    console.log(`Attempting to save user: ${JSON.stringify(user)}`); // Log antes de salvar
+    console.log(`Attempting to save user: ${JSON.stringify(user)}`);
 
     try {
-      // // Aqui usamos 'doc' para especificar o documento
+      // // Aqui usamos 'doc' para especificar o nome documento
       // const userDoc = doc(db, "users", user?.email);
       // await setDoc(userDoc, user);
       // console.log(`User ${user.userName} saved successfully.`);

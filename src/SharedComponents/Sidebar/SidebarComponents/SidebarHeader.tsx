@@ -1,4 +1,3 @@
-// src/components/Sidebar/SidebarHeader.tsx
 import style from "../../../Pages/Homepage/Frontend/Homepage.module.css";
 import { FaInstagram } from "react-icons/fa";
 import blackTitle from "../../../assets/black-title.png";

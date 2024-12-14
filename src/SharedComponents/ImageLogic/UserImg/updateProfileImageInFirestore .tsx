@@ -1,14 +1,13 @@
 import { doc, updateDoc } from "firebase/firestore";
 import { db } from "../../../firebase";
 
-// Função para atualizar a imagem de perfil no Firestore
 export const updateProfileImageInFirestore = async (
   email: string,
   url: string
 ): Promise<void> => {
-  const userRef = doc(db, "users", email); // Referência ao documento do usuário
+  const userRef = doc(db, "users", email);
   await updateDoc(userRef, {
-    profileImage: url, // Atualiza o campo de profileImage no Firestore
+    profileImage: url,
   });
   console.log("User profile image updated in Firestore.");
 };

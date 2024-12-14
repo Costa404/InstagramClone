@@ -6,7 +6,7 @@ interface MenuOptionProps {
   name: string;
   icon: React.ReactNode;
   onClick?: () => void;
-  isActive: boolean; // Adicione esta prop para saber se está ativo
+  isActive: boolean;
 }
 
 const MenuOption: React.FC<MenuOptionProps> = ({
@@ -15,14 +15,14 @@ const MenuOption: React.FC<MenuOptionProps> = ({
   onClick,
   isActive,
 }) => {
-  const { theme } = useTheme(); // Obtendo o tema atual
+  const { theme } = useTheme();
   return (
     <li className="d-flex align-items-center pt-2 ml-5  fs-1 fw-semibold text-center  w-100 ">
       <a
         href="#"
         onClick={onClick}
         className={`w-100  text-decoration-none   fs-3 fw-normal d-flex  ${
-          isActive ? "active" : "" // Use isActive para aplicar a classe
+          isActive ? "active" : ""
         }`}
       >
         <div

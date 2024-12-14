@@ -13,8 +13,6 @@ const useSignupLogic = () => {
   const handleSignUp = async () => {
     setError(null);
 
-    // Check if the email is already in use
-
     try {
       const userCredential = await createUserWithEmailAndPassword(
         auth,
@@ -23,9 +21,9 @@ const useSignupLogic = () => {
       );
       const user = userCredential.user;
 
-      // Store in Firestore
+      // armazena firebase
       await setDoc(doc(db, "users", emailSignup), {
-        userId: user.uid, // Use the Firebase UID
+        userId: user.uid,
         email: user.email,
         createdAt: new Date(),
         fullName: fullNameSignup,

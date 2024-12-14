@@ -16,14 +16,13 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [theme, setTheme] = useState<string>("dark"); // Usar 'dark' ou 'light' ao invés de "dark-theme"
+  const [theme, setTheme] = useState<string>("dark");
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
   };
 
   useEffect(() => {
-    // Aplicar as classes de tema no <body> diretamente
     document.body.className =
       theme === "light" ? "bg-white text-black" : "bg-black text-white";
   }, [theme]);

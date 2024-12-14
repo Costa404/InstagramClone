@@ -3,7 +3,6 @@ import { fetchUsersFromFirebase } from "./FetchFakeUsers";
 import { User } from "../Interface/Interface";
 
 const UserList = () => {
-  // Especificando o tipo do estado como User[]
   const [fakeUsers, setFakeUsers] = useState<User[]>([]);
 
   useEffect(() => {

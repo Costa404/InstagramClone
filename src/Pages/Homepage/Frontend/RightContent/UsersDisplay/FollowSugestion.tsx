@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import { generateUsers } from "../../MidSection/UpperContent/generateUsers";
 
-// ajuste o caminho conforme necessário
-
 const UpperContent = () => {
-  const users = generateUsers(5); // Gera 8 usuários para exibir
+  const users = generateUsers(5);
 
   return (
     <section className=" d-flex flex-column  " style={{ zIndex: "2" }}>
@@ -15,7 +13,6 @@ const UpperContent = () => {
 
         <Link to="/Homepage/allUsers">
           {" "}
-          {/* Use "all-users" em vez de "allUsers" para seguir a convenção */}
           <h6 className=" fs-5">See All</h6>
         </Link>
       </div>

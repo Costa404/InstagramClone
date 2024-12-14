@@ -66,7 +66,6 @@ export const CurrentUserProvider: React.FC<{ children: ReactNode }> = ({
       }
     });
 
-    // Cleanup subscription on unmount
     return () => unsubscribe();
   }, []);
 

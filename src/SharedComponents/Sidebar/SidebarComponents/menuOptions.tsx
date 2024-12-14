@@ -11,7 +11,6 @@ import { saveFakeUsersToFirebase } from "../../FakeUsers/saveFakeUsersFirebase";
 import ProfileImg from "../../../Pages/Profile/ProfileComponents/ProfileHeaderComponentes/ProfileImage/ProfileImg";
 import { useSelectedUser } from "../../../useContext/SelectedUserContext";
 
-// Hook personalizado para criar menuOptions
 export const useMenuOptions = () => {
   const { currentUserId } = useCurrentUser();
   const { selectedUser } = useSelectedUser();
@@ -64,12 +63,11 @@ export const useMenuOptions = () => {
   return { menuOptions };
 };
 
-// Definindo a função de manipulação de ações do menu
 export const handleMenuAction = async (action: string) => {
   if (action === "createFakeUsers") {
     const numUsers = 50;
     try {
-      await saveFakeUsersToFirebase(numUsers); // Chama a função para criar usuários
+      await saveFakeUsersToFirebase(numUsers);
       console.log(`${numUsers} fake users created successfully.`);
     } catch (error) {
       console.error("Error creating fake users:", error);

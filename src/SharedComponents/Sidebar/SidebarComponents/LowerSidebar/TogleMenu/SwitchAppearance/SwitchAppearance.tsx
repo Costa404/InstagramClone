@@ -3,7 +3,7 @@ import { MdOutlineLightMode } from "react-icons/md";
 import { useTheme } from "../../../../../../useContext/ThemeContext/ThemeContext";
 
 type SwitchAppearanceProps = {
-  closeMainDiv: () => void; // Define como uma função sem parâmetros e sem retorno
+  closeMainDiv: () => void;
 };
 
 const SwitchAppearance: React.FC<SwitchAppearanceProps> = ({

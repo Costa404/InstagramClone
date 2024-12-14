@@ -24,14 +24,14 @@ export const useCheckEmail = () => {
       if (!querySnapshot.empty) {
         console.log("Email is already in use.");
         setError("Email is already in use.");
-        return { exists: true, message: "Email is already in use." }; // Retorna que o email existe
+        return { exists: true, message: "Email is already in use." };
       }
 
-      return { exists: false }; // Retorna que o email está disponível
+      return { exists: false };
     } catch (error) {
       console.error("Error checking email:", error);
       setError("Error checking email.");
-      return { exists: false, message: "Error checking email." }; // Retorna erro
+      return { exists: false, message: "Error checking email." };
     }
   };
 

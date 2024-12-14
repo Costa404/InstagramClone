@@ -15,7 +15,7 @@ export const useUnfollowUser = () => {
     try {
       const userRef = doc(db, "users", currentUserId?.userName);
       await updateDoc(userRef, {
-        following: arrayRemove(followUserId), // Remove o userId do array de following
+        following: arrayRemove(followUserId),
       });
     } catch (error) {
       console.error("Erro ao deixar de seguir o usuário: ", error);

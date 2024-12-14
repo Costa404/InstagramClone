@@ -1,5 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-// appRoutes.tsx
+
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import CustomErrorPage from "../useContext/errorContext/ErrorRoute";
@@ -27,8 +27,6 @@ const LazySuggestionUsers = React.lazy(
 const LazyCreatePost = React.lazy(
   () => import("../SharedComponents/createPost/CreatePost.tsx")
 );
-
-// Crie o hook personalizado
 export const useAppRoutes = () => {
   const { currentUserId } = useCurrentUser();
   return createBrowserRouter([
@@ -70,7 +68,7 @@ export const useAppRoutes = () => {
           path: "allUsers",
           element: <LazyAllUsers />,
         },
-        ProfileRoutes, // Inclui as rotas de perfil
+        ProfileRoutes,
       ],
     },
   ]);

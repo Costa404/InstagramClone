@@ -88,7 +88,6 @@ const PostsSection = () => {
           style={{ listStyle: "none" }}
           className="hover"
         >
-          {/* Renderizando a imagem */}
           <img
             src={post.imageUrl}
             alt={post.description || "Post image"}
@@ -96,8 +95,8 @@ const PostsSection = () => {
               width: "30.76rem",
               height: "30.7rem",
               objectFit: "cover",
-            }} // Ajuste de estilo opcional
-            onClick={() => setSelectedPost(post)} // Define o post clicado
+            }}
+            onClick={() => setSelectedPost(post)}
           />
         </li>
       ))}

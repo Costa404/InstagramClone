@@ -1,5 +1,5 @@
 import { collection, doc, Timestamp } from "firebase/firestore";
-import { getAuth } from "firebase/auth"; // Import Firebase Auth
+import { getAuth } from "firebase/auth";
 import { usePostContext } from "../../useContext/PostContext/PostContext";
 
 import { PostData } from "../Interface/Interface";
@@ -37,15 +37,14 @@ export const useHandleSharePost = () => {
           throw new Error("User is not authenticated.");
         }
 
-        const postsCollectionRef = collection(db, "posts"); // Substitua "posts" pelo nome da sua coleção no Firestore
-        const postRef = doc(postsCollectionRef); // Cria uma referência com ID único
+        const postsCollectionRef = collection(db, "posts");
+        const postRef = doc(postsCollectionRef);
         const postId = postRef.id;
 
-        // Crie o objeto conforme a interface PostData
         const postData: PostData = {
           userId: currentUser.uid,
           userName: currentUserId?.userName,
-          imageUrl, // Use a URL retornada diretamente
+          imageUrl,
           description: description || null,
           createdAt: Timestamp.now(),
           likesCount: 0,

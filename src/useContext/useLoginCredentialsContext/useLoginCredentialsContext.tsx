@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
 
-// Definindo o tipo do contexto para login
 type LoginContext = {
   emailLogin: string;
   setEmailLogin: React.Dispatch<React.SetStateAction<string>>;
@@ -12,16 +11,14 @@ type LoginContext = {
 
 const LoginContext = createContext<LoginContext | undefined>(undefined);
 
-// Provedor do contexto de login
 export const LoginProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   // const { setUserName } = useAuthUser(); // Obtendo a função setUserName do AuthContext
   const [emailLogin, setEmailLogin] = useState("");
   const [passwordLogin, setPasswordLogin] = useState("");
-  const [userNameLogin, setUserNameLogin] = useState(""); // Estado para armazenar o userName
+  const [userNameLogin, setUserNameLogin] = useState("");
 
-  // UseEffect para atualizar o userName no AuthContext quando usernameLogin mudar
   // useEffect(() => {
   //   if (userNameLogin) {
   //     setUserName(userNameLogin); // Atualiza o userName no AuthContext
@@ -44,7 +41,6 @@ export const LoginProvider: React.FC<{ children: React.ReactNode }> = ({
   );
 };
 
-// Hook para usar o contexto de login
 export const useLoginProvider = () => {
   const context = useContext(LoginContext);
   if (!context) {

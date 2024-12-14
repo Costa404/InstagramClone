@@ -71,7 +71,7 @@ const ProfileDetails = ({
         <span className="fs-4">{displayUser?.followersCount} Followers</span>
         <span className="fs-4">{followingCount} Following</span>
       </div>
-      <h3>{displayUser?.fullName}</h3> {/* Exibindo o nome completo */}
+      <h3>{displayUser?.fullName}</h3>
     </div>
   );
 };

@@ -22,7 +22,6 @@ const UserItem: FC<UserItemProps> = ({
       className="d-flex justify-content-between align-items-center"
       style={{ width: "60rem", marginBottom: "1.5rem" }}
     >
-      {/* Div para a imagem e informações do usuário */}
       <div className="d-flex gap-3">
         <img
           onClick={() => onClick?.(user)}
@@ -39,7 +38,6 @@ const UserItem: FC<UserItemProps> = ({
         </div>
       </div>
 
-      {/* Botão de Follow */}
       <BtnFollowAndUnfollow
         userId={user.userName}
         onFollowClick={onFollowClick}

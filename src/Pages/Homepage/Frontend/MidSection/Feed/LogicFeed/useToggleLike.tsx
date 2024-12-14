@@ -10,7 +10,6 @@ export const useToggleLike = (postData: PostData) => {
   useEffect(() => {
     const postRef = doc(db, "posts", postData.postId);
 
-    // Listener para escutar mudanças no Firestore
     const unsubscribe = onSnapshot(postRef, (doc) => {
       const data = doc.data();
       if (data) {
@@ -18,14 +17,13 @@ export const useToggleLike = (postData: PostData) => {
       }
     });
 
-    return () => unsubscribe(); // Limpar o listener ao desmontar o componente
+    return () => unsubscribe();
   }, [postData.postId]);
 
   const changeLikeState = () => {
     const newLikeState = !like;
     setLike(newLikeState);
 
-    // Atualizar o Firestore
     toggleLike(newLikeState);
   };
 

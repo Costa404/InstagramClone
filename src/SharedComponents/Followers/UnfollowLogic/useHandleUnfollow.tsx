@@ -14,10 +14,8 @@ export const useHandleUnfollow = () => {
   const handleUnfollowInner = async () => {
     if (currentUser) {
       try {
-        // Chama a função para atualizar o Firestore
         await unfollowUser();
 
-        // Atualiza o estado local para refletir o unfollow
         setIsFollowing(followUserId as string, false);
 
         console.log(`Successfully unfollowed user with ID: ${followUserId}`);

@@ -3,8 +3,8 @@
 import React, { createContext, useContext, useState } from "react";
 
 interface FollowUserIdContextType {
-  followUserId: string | null; // Permite string ou null
-  setFollowUserId: (user: string | null) => void; // Aceita string ou null
+  followUserId: string | null;
+  setFollowUserId: (user: string | null) => void;
 }
 
 const FollowUserIdContext = createContext<FollowUserIdContextType | undefined>(

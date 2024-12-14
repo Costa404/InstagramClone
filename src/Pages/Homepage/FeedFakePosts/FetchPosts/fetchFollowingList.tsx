@@ -5,7 +5,7 @@ export const fetchPostsFromFolllowedUsers = async (userIds: string) => {
   try {
     const postQuery = query(
       collection(db, "posts"),
-      where("userId", "in", userIds) // Aplica o filtro direto na query
+      where("userId", "in", userIds)
     );
 
     const unsubscribe = onSnapshot(postQuery, (snapshot) => {

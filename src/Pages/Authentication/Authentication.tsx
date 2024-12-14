@@ -16,7 +16,7 @@ const Authentication = () => {
         <div className="h-100 imgAuthLogin">
           <img
             className="mt-5 "
-            style={{ minHeight: "50rem", maxWidth: "100%" }} // Ajusta a largura da imagem
+            style={{ minHeight: "50rem", maxWidth: "100%" }}
             src={instagramTest}
             alt="Instagram Test"
           />

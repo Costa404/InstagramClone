@@ -16,12 +16,11 @@ export const useImgUpload = () => {
 
   const fileName = selectedImg?.name;
 
-  // Função para gerar a chave única com base no tipo de imagem
   const generateImageKey = (imageType: "profile" | "post") => {
     if (imageType === "profile") {
-      return `profileImages/${currentUserId?.userName}`; // Para imagem de perfil
+      return `profileImages/${currentUserId?.userName}`;
     }
-    return `postImages/${selectedUser?.userName}-${fileName}`; // Para imagem de post
+    return `postImages/${selectedUser?.userName}-${fileName}`;
   };
 
   const uploadImage = async (
@@ -79,32 +78,3 @@ export const useImgUpload = () => {
     uploading,
   };
 };
-
-// // Função para gerar o caminho da imagem no Firebase Storage
-
-// export const useImgUpload = () => {
-//   const { currentUserId } = useCurrentUser();
-//   useGenerateImageKey();
-
-//   const { selectedImg } = useImgUploadContext();
-//   const uploadImage = async (): Promise<string | null> => {
-//     if (!selectedImg || !currentUserId) {
-//       console.error("No selectedImg provided or user not found.");
-//       return null;
-//     }
-
-//     const imageKey = generateImageKey(currentUserId.userName, selectedImg.name); // Gera o caminho para o upload
-//     const url = await uploadImageToStorage(selectedImg, imageKey); // Faz o upload para o Firebase Storage
-
-//     if (url) {
-//       // Se a URL foi retornada, atualiza o Firestore com a nova URL
-//       await updateProfileImageInFirestore(currentUserId?.email as string, url);
-//     }
-
-//     return url;
-//   };
-
-//   return {
-//     uploadImage,
-//   };
-// };

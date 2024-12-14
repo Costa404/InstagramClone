@@ -16,15 +16,15 @@ const BtnFollowandUnfollow: FC<FollowAndUnfollowButtonProps> = ({
   const { setFollowUserId } = useFollowUserIdContext();
   const { isFollowing, setIsFollowing } = useIsFollowing();
 
-  const isUserFollowing = isFollowing[userId] ?? false; // Se não encontrado, assume false
+  const isUserFollowing = isFollowing[userId] ?? false;
 
   const handleClick = () => {
     if (isUserFollowing) {
-      setIsFollowing(userId, false); // Atualiza o contexto para deixar de seguir
+      setIsFollowing(userId, false);
       onUnfollowClick(userId);
     } else {
-      setIsFollowing(userId, true); // Atualiza o contexto para seguir
-      setFollowUserId(userId); // Passa o userId para o contexto
+      setIsFollowing(userId, true);
+      setFollowUserId(userId);
       onFollowClick(userId);
     }
   };

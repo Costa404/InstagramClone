@@ -7,7 +7,7 @@ const InferiorSection = () => {
   const navigate = useNavigate();
 
   const handleSignUpClick = () => {
-    navigate("/signup"); // Substitua "/signup" pelo caminho da sua rota de signup
+    navigate("/signup");
   };
 
   return (

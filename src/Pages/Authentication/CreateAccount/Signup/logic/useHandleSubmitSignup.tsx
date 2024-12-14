@@ -41,7 +41,6 @@ export const useHandleSubmitSignup = () => {
       const emailDoc = await checkEmail(emailSignup);
       const userNameDoc = await checkUserName(userNameSignup);
 
-      // Inicializa um objeto de erros
       let hasErrors = false;
 
       if (userNameDoc.exists) {
@@ -49,7 +48,7 @@ export const useHandleSubmitSignup = () => {
           ...prevError,
           userName: "This username is already in use.",
         }));
-        hasErrors = true; // Marca que há um erro
+        hasErrors = true;
       } else {
         setErrorSignup((prevError) => ({ ...prevError, userName: "" }));
       }
@@ -59,18 +58,18 @@ export const useHandleSubmitSignup = () => {
           ...prevError,
           email: "This email is already in use.",
         }));
-        hasErrors = true; // Marca que há um erro
+        hasErrors = true;
       } else {
         setErrorSignup((prevError) => ({ ...prevError, email: "" }));
       }
 
       // Verifica se houve erros
       if (!hasErrors) {
-        setError(""); // Limpa qualquer erro global
-        const signUpSuccess = await handleSignUp(); // Chama a função de sign-up
+        setError("");
+        const signUpSuccess = await handleSignUp();
         if (signUpSuccess) {
           console.log("handleSignUp concluído. Redirecionando para /homepage");
-          navigate("/homepage"); // Redireciona para homepage após sucesso
+          navigate("/homepage"); // Redireciona para homepage if sucesso
         }
       }
     } catch (error) {

@@ -3,7 +3,7 @@ import React from "react";
 type BoxAccountProps = {
   handleSignUpOrLogIn: (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-  ) => void; // Tipando handleSignUp corretamente
+  ) => void;
   accountState: string;
   state: string;
 };

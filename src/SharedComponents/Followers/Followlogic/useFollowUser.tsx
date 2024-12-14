@@ -38,7 +38,6 @@ export const useFollowUser = () => {
       const userDoc = await getDoc(userRef);
 
       if (userDoc.exists()) {
-        // Atualiza o campo 'following' do usuário existente
         await updateDoc(userRef, {
           following: arrayUnion(followUserId),
         });
@@ -46,14 +45,12 @@ export const useFollowUser = () => {
           `User  ${currentUserId?.userName} has started following ${followUserId}.`
         );
 
-        // Atualiza o documento para verificar a lista de 'followng'
         const updatedUserDoc = await getDoc(userRef);
 
         if (updatedUserDoc.exists()) {
           // const followingList = updatedUserDoc.data()?.following;
-          // Verifique a lista de 'following' do usuário
           // if (followingList && followingList.length >= 5) {
-          //   navigate("/homepage"); // Redirecionar se o número de 'followings' for >= 5
+          //   navigate("/homepage");
           // }
         } else {
           console.error("Updated user document does not exist.");

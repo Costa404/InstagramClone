@@ -18,18 +18,16 @@ const UsersDisplayList = () => {
   const { handleUnfollowInner } = useHandleUnfollow();
 
   const handleClick = (user: User) => {
-    // Atualiza o estado após a renderização
     setSelectedUser(user);
     navigate(`/homepage/${user.userName}`);
   };
 
-  // Use useEffect para prevenir chamadas de setState durante renderização
   useEffect(() => {
     if (fakeUsers && fakeUsers.length > 0) {
-      // Qualquer ação necessária após fakeUsers ser carregado
+      //
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // Dependência para reagir à mudança no fakeUsers
+  }, []);
 
   return (
     <div className="gap-4 d-flex flex-column align-items-center ">

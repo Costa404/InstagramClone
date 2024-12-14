@@ -1,9 +1,8 @@
-// ErrorContext.tsx
 import React, { createContext, useContext, useState } from "react";
 
 interface UserIdContextType {
-  userId: string | null; // Permite string ou null
-  setUserId: (user: string | null) => void; // Aceita string ou null
+  userId: string | null;
+  setUserId: (user: string | null) => void;
 }
 
 const UserIdContext = createContext<UserIdContextType | undefined>(undefined);

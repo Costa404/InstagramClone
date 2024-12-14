@@ -1,7 +1,6 @@
 import { faker } from "@faker-js/faker";
 
 const PostContainer = () => {
-  // Gera uma URL de imagem aleatória
   const randomImageUrl = faker.image.url();
 
   return (

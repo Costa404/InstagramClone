@@ -8,8 +8,8 @@ export const useCreateHomepageData = () => {
     if (currentUserId?.userName) {
       const useRef = doc(db, "homepage", currentUserId?.userName);
       await setDoc(useRef, {
-        stats: { posts: 0, followers: 0, following: 0 }, // Dados iniciais
-        recentActivity: [], // Exemplo de outro campo, caso necessário
+        stats: { posts: 0, followers: 0, following: 0 },
+        recentActivity: [],
       });
     }
   };

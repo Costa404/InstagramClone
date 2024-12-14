@@ -18,7 +18,6 @@ export const PostsCollection = async (
       location: location || null,
     };
 
-    // Add the document to the 'posts' collection
     await addDoc(collection(db, "posts"), postData);
     console.log("Post created successfully!");
   } catch (error) {

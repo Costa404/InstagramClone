@@ -21,8 +21,8 @@
 //         }
 //       });
 
-//       console.log(fakeUserIdList); // Exibindo todos os userIds
-//       setUserId(fakeUserIdList); // Armazena a lista de userIds no contexto
+//       console.log(fakeUserIdList);
+//       setUserId(fakeUserIdList);
 //     };
-//    fetchFakeUsers(); // Chama a função para buscar os fake users
+//    fetchFakeUsers();
 //   }, [setUserId]);

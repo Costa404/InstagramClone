@@ -19,8 +19,8 @@ const PostContext = createContext<PostContextProps | undefined>(undefined);
 export const PostProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [description, setDescription] = useState(""); // String inicial
-  const [location, setLocation] = useState(""); // String
+  const [description, setDescription] = useState("");
+  const [location, setLocation] = useState("");
 
   return (
     <PostContext.Provider

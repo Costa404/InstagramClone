@@ -8,7 +8,7 @@ export const useProfileImage = () => {
 
   const handleImageClick = () => {
     if (inputRef.current) {
-      inputRef.current.click(); // Abre o seletor de arquivos
+      inputRef.current.click(); // Abre o seletor
     }
   };
 

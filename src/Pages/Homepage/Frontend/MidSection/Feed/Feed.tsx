@@ -43,7 +43,7 @@ const Feed: React.FC = () => {
           <PostCard key={`post.userName-${Math.random() * 10}`} post={post} />
         ))
       ) : (
-        <div>Não há posts para mostrar.</div>
+        <div>still no posts..</div>
       )}
     </div>
   );

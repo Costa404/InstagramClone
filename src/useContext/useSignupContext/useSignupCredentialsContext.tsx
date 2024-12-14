@@ -1,6 +1,5 @@
 import React, { createContext, useState, useContext } from "react";
 
-// Definindo o tipo do contexto para TypeScript (opcional)
 type SignupContext = {
   emailSignup: string;
   setEmailSignup: React.Dispatch<React.SetStateAction<string>>;
@@ -23,7 +22,6 @@ export const SignupProvider: React.FC<{ children: React.ReactNode }> = ({
   const [fullNameSignup, setFullNameSignup] = useState("");
   const [userNameSignup, setUserNameSignup] = useState("");
 
-  // Atualize o contexto do Auth apenas quando o nome de usuário estiver pronto
   // useEffect(() => {
   //   if (userNameSignup) {
   //     setUserName(userNameSignup);

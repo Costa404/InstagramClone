@@ -13,7 +13,7 @@ const LoadingFallback = (
 );
 
 const App: React.FC = () => {
-  const appRoutes = useAppRoutes(); // useAppRoutes é chamado aqui, dentro do componente React
+  const appRoutes = useAppRoutes();
 
   return (
     <Suspense fallback={LoadingFallback}>

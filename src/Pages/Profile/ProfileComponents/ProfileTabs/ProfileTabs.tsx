@@ -4,7 +4,7 @@ import { IoBookmarkOutline } from "react-icons/io5";
 import { MdGridOn } from "react-icons/md";
 import { CgPlayButtonR, CgProfile } from "react-icons/cg";
 import { NavLink } from "react-router-dom";
-import styles from "../../Profile.module.css"; // Import CSS Module
+import styles from "../../Profile.module.css";
 
 const ProfileTabs = () => {
   return (
@@ -22,7 +22,7 @@ const ProfileTabs = () => {
       </NavLink>
 
       <NavLink
-        to="/Homepage/profile/reels" // Ajuste o caminho para "/profile/reels"
+        to="/Homepage/profile/reels"
         className={({ isActive }) =>
           `d-flex gap-2 ${styles["profile-tab"]} ${
             isActive ? styles["profile-tab-active"] : ""
@@ -34,7 +34,7 @@ const ProfileTabs = () => {
       </NavLink>
 
       <NavLink
-        to="/profile/saved" // Ajuste o caminho para "/profile/saved"
+        to="/profile/saved"
         className={({ isActive }) =>
           `d-flex gap-2 ${styles["profile-tab"]} ${
             isActive ? styles["profile-tab-active"] : ""
@@ -46,7 +46,7 @@ const ProfileTabs = () => {
       </NavLink>
 
       <NavLink
-        to="/profile/tagged" // Ajuste o caminho para "/profile/tagged"
+        to="/profile/tagged"
         className={({ isActive }) =>
           `d-flex gap-2 ${styles["profile-tab"]} ${
             isActive ? styles["profile-tab-active"] : ""

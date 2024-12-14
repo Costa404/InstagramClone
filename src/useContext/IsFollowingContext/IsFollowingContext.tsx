@@ -1,4 +1,3 @@
-// FollowContext.tsx
 import React, { createContext, useState, useContext, ReactNode } from "react";
 
 interface IsFollowingContextType {
@@ -17,7 +16,6 @@ const IsFollowingContext = createContext<IsFollowingContextType | undefined>(
 export const IsFollowingProvider: React.FC<FollowProviderProps> = ({
   children,
 }) => {
-  // Usar um mapa de userId -> isFollowing
   const [isFollowing, setIsFollowing] = useState<{ [userId: string]: boolean }>(
     {}
   );

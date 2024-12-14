@@ -19,7 +19,6 @@ const ProfileImg: React.FC<ProfileImageProps> = ({
   useEffect(() => {
     const fetchProfileImage = async () => {
       try {
-        // Verifica se a URL já está armazenada no localStorage
         const storedUrl = localStorage.getItem(`profileImage_${userId}`);
         if (storedUrl) {
           setProfileImageUrl(storedUrl);
@@ -42,7 +41,7 @@ const ProfileImg: React.FC<ProfileImageProps> = ({
     };
 
     fetchProfileImage();
-  }, [userId, getProfileImage]); // Atualiza a lógica ao mudar o userId
+  }, [userId, getProfileImage]);
   console.log("profileImage", profileImageUrl);
 
   return (

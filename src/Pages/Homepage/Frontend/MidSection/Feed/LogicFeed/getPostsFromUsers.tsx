@@ -13,14 +13,14 @@ export const getPostsFromUsers = async (
     const data = doc.data();
     return {
       postId: doc.id,
-      userId: data.userId, // Garanta que todas as propriedades sejam extraídas corretamente
+      userId: data.userId,
       imageUrl: data.imageUrl,
-      description: data.description || null, // Usando null como fallback se estiver ausente
-      createdAt: data.createdAt, // A data também precisa estar corretamente formatada
-      likesCount: data.likesCount || 0, // Definir valores padrão caso os dados faltem
-      comments: data.comments || "", // Definindo fallback
+      description: data.description || null,
+      createdAt: data.createdAt,
+      likesCount: data.likesCount || 0,
+      comments: data.comments || "",
       location: data.location || null,
-      userName: data.userName || undefined, // Definindo fallback
+      userName: data.userName || undefined,
     };
   });
 };

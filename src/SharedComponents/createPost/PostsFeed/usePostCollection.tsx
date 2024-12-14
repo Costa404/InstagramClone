@@ -12,11 +12,8 @@ export const usePostCollection = () => {
         throw new Error("User ID or userName is missing.");
       }
 
-      // Cria uma referência ao documento com base no userName
-      // Cria o ID customizado
-      const postDocRef = doc(db, "posts", postData.postId); // Usa o ID customizado no Firestore
+      const postDocRef = doc(db, "posts", postData.postId);
 
-      // Adiciona os dados do post ao Firestore
       await setDoc(postDocRef, {
         ...postData,
         createdAt: postData.createdAt || Timestamp.now(),

@@ -13,14 +13,12 @@ export const ErrorProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {
   const [error, setError] = useState<string | null>(null);
 
-  // Efeito para limpar o erro após 10 segundos
   useEffect(() => {
     if (error) {
       const timer = setTimeout(() => {
         setError(null);
       }, 10000); // Limpa o erro após 10 segundos
 
-      // Limpa o timer se o componente for desmontado ou o erro mudar
       return () => clearTimeout(timer);
     }
   }, [error]);

@@ -14,7 +14,7 @@ export const useGetProfileImage = () => {
     //   "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg";
     // const defaultProfileImage =
     const storageRef = ref(storage, `profileImages/${currentUserId.userName}`);
-    console.log("Storage reference:", storageRef.fullPath); // Verifique o caminho
+    console.log("Storage reference:", storageRef.fullPath);
     console.log("currentUserId.userName", currentUserId.userName);
     try {
       const url = await getDownloadURL(storageRef);

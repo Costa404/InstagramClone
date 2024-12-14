@@ -2,7 +2,7 @@ import { generateUsers } from "./generateUsers";
 import { TitleWithAlternateColor } from "./TitleWithAlternateColor";
 
 const UpperContent = () => {
-  const users = generateUsers(8); // Gera 8 usuários para exibir
+  const users = generateUsers(8);
 
   return (
     <section>
