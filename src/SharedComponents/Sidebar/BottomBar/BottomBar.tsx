@@ -1,10 +1,10 @@
-import ProfileImg from "../../../Pages/Profile/ProfileComponents/ProfileHeaderComponentes/ProfileImage/ProfileImg";
 import { LuSend } from "react-icons/lu";
 import { CiSquarePlus } from "react-icons/ci";
 import { BsCameraReels } from "react-icons/bs";
 import { FaRegCompass } from "react-icons/fa";
 import { GoHomeFill } from "react-icons/go";
 import { useSelectedUser } from "../../../useContext/SelectedUserContext";
+import ProfileImg from "../../../Pages/Profile/ProfileComponents/ProfileHeaderComponentes/ProfileImage/ProfileImg";
 
 const BottomBar = () => {
   const { selectedUser } = useSelectedUser();
