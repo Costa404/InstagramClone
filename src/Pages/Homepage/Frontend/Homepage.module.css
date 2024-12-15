@@ -23,6 +23,12 @@
   color: dark;
 }
 
+@media screen and (max-width: 764px) {
+  .sidebar {
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .sidebar {
     max-width: 7.2rem !important;

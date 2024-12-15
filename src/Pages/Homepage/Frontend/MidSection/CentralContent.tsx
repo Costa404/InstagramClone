@@ -11,7 +11,7 @@ const CentralContent = () => {
       style={{
         overflowY: "auto",
         flex: "1",
-        marginLeft: "31.9rem",
+        marginLeft: "15%",
         minWidth: "158.5rem",
         gap: "15rem",
         flexShrink: "0",

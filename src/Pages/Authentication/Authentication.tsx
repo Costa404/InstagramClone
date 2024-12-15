@@ -10,7 +10,7 @@ const Authentication = () => {
   return (
     <div className="container vh-100 d-flex flex-column  justify-content-center align-items-center mt-5">
       <div
-        className="d-flex justify-content-center align-items-center"
+        className="d-flex columnAt650 justify-content-center align-items-center"
         style={{ gap: "2.5rem" }}
       >
         <div className="h-100 imgAuthLogin">
