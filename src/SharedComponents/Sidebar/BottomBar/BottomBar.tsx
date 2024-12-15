@@ -1,4 +1,3 @@
-import React from "react";
 import ProfileImg from "../../../Pages/Profile/ProfileComponents/ProfileHeaderComponentes/ProfileImage/ProfileImg";
 import { LuSend } from "react-icons/lu";
 import { CiSquarePlus } from "react-icons/ci";
