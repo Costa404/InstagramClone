@@ -3,6 +3,7 @@ import UpperContent from "./UpperContent/UpperContent";
 import RightContent from "../RightContent/RightContent";
 
 import Feed from "./Feed/Feed";
+import BottomBar from "../../../../SharedComponents/Sidebar/BottomBar/BottomBar";
 
 const CentralContent = () => {
   return (
@@ -21,6 +22,7 @@ const CentralContent = () => {
       <div className="col-4 d-flex flex-column align-items-center  test ">
         <UpperContent />
         <Feed />
+        <BottomBar />
       </div>
       <RightContent />
     </div>

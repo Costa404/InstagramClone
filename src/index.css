@@ -148,3 +148,9 @@ media
     width: 100%;
   }
 }
+
+@media screen and (max-width: 764px) {
+  .bottomBar {
+    display: block !important;
+  }
+}
