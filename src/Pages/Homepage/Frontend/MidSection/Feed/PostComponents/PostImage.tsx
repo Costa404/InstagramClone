@@ -17,14 +17,14 @@ const PostImage: React.FC<PostImageProps> = ({ imageUrl }) => {
   //   // NAO FUNCIONA ^^^^
   // };
   return (
-    <div className=" hover">
+    <div className=" hover w-100">
       <Card.Img
         variant="middle"
-        className="w-100"
+        className="w-100 img-fluid"
         src={imageUrl}
         style={{
-          minHeight: "50.5rem",
-          minWidth: "46.8rem",
+          height: "50.5rem",
+          width: "100%",
           objectFit: "cover",
         }}
       />

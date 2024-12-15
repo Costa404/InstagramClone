@@ -133,3 +133,18 @@ media
     flex-direction: column;
   }
 }
+
+@media screen and (max-width: 764px) {
+  .marginLeftZero650 {
+    margin-left: 0% !important;
+  }
+}
+@media screen and (max-width: 540px) {
+  .marginLeftZero650 {
+    min-width: 100% !important;
+  }
+
+  .test {
+    width: 100%;
+  }
+}

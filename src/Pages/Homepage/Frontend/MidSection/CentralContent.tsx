@@ -7,7 +7,7 @@ import Feed from "./Feed/Feed";
 const CentralContent = () => {
   return (
     <div
-      className=" d-flex justify-content-center w-100 position-relative "
+      className=" d-flex justify-content-center w-100 position-relative marginLeftZero650 "
       style={{
         overflowY: "auto",
         flex: "1",
@@ -18,7 +18,7 @@ const CentralContent = () => {
         zIndex: "1",
       }}
     >
-      <div className="col-4 d-flex flex-column align-items-center">
+      <div className="col-4 d-flex flex-column align-items-center  test ">
         <UpperContent />
         <Feed />
       </div>
