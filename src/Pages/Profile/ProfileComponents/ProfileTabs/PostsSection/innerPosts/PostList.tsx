@@ -9,7 +9,7 @@ const PostList = ({
 }) => {
   return (
     <ul
-      className="d-flex gap-2 mt-3 h-100 containerPostsProfile w-100"
+      className="d-flex gap-2 mt-3 h-100 containerPostsProfile "
       style={{
         flexWrap: "wrap", // Permite quebra de linha
         maxWidth: "93.3rem",

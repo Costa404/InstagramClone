@@ -41,8 +41,8 @@ const ProfileDetails = ({
   if (!displayUser) return null;
 
   return (
-    <div className="d-flex flex-column w-75 justify-content-center gap-5">
-      <div className="d-flex gap-4 fw-bold align-items-center">
+    <div className="d-flex flex-column w-75 justify-content-center gap-5 profileHeaderContainer ">
+      <div className="d-flex profileHeaderSubContainer gap-4 fw-bold align-items-center">
         <h3>{displayUser?.userName}</h3>
         <ActionButtons
           onFollowClick={onFollowClick}

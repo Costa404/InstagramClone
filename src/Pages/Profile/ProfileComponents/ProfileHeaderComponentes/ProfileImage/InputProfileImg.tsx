@@ -10,7 +10,11 @@ const UploadProfileImg = () => {
     useProfileImage();
 
   return (
-    <div onClick={handleImageClick} className="d-flex align-items-center p-5">
+    <div
+      onClick={handleImageClick}
+      className="d-flex "
+      style={{ paddingLeft: "3rem" }}
+    >
       <input
         type="file"
         accept="image/*"
@@ -19,7 +23,10 @@ const UploadProfileImg = () => {
         onChange={handleImageSelection}
       />
 
-      <ProfileImg userId={selectedUser?.userName as string} />
+      <ProfileImg
+        userId={selectedUser?.userName as string}
+        style={{ width: "7.7rem", height: "7.7rem" }}
+      />
 
       {/* <img
         src={defaultPic}

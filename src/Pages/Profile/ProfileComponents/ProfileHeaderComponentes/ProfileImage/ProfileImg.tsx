@@ -49,12 +49,12 @@ const ProfileImg: React.FC<ProfileImageProps> = ({
       {profileImageUrl ? (
         <img
           src={profileImageUrl}
-          className="hover"
+          className="hover pictureProfile"
           alt="Profile"
           data-testid="cypress-Profile"
           style={{
-            width: "150px",
-            height: "150px",
+            width: "15rem",
+            height: "15rem",
             borderRadius: "50%",
             objectFit: "cover",
             ...style,

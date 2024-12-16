@@ -8,7 +8,7 @@ const ProfileLayout = () => {
     <div className="app-layout w-100  ">
       <div
         className="main-content h-100 d-flex align-items-center flex-column  flex-grow-1 w-100 profileContainer"
-        style={{ marginLeft: "5%" }}
+        // style={{ marginLeft: "5%" }}
       >
         <ContentProfile />
 
