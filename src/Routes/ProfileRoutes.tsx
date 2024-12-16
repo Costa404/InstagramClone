@@ -9,7 +9,7 @@ const LazyProfileReels = React.lazy(
 const LazyProfilePosts = React.lazy(
   () =>
     import(
-      "../Pages/Profile/ProfileComponents/ProfileTabs/PostsSection/PostsSection"
+      "../Pages/Profile/ProfileComponents/ProfileTabs/PostsSection/innerPosts/PostsSection"
     )
 );
 

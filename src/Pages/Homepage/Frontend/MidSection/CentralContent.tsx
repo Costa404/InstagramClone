@@ -3,7 +3,6 @@ import UpperContent from "./UpperContent/UpperContent";
 import RightContent from "../RightContent/RightContent";
 
 import Feed from "./Feed/Feed";
-import BottomBar from "../../../../SharedComponents/Sidebar/BottomBar/BottomBar";
 
 const CentralContent = () => {
   return (
@@ -16,13 +15,11 @@ const CentralContent = () => {
         minWidth: "158.5rem",
         gap: "15rem",
         flexShrink: "0",
-        zIndex: "1",
       }}
     >
       <div className="col-4 d-flex flex-column align-items-center  test ">
         <UpperContent />
         <Feed />
-        <BottomBar />
       </div>
       <RightContent />
     </div>

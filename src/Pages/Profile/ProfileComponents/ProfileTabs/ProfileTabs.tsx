@@ -5,12 +5,14 @@ import { MdGridOn } from "react-icons/md";
 import { CgPlayButtonR, CgProfile } from "react-icons/cg";
 import { NavLink } from "react-router-dom";
 import styles from "../../Profile.module.css";
+import { useCurrentUser } from "../../../../useContext/currentUserContext/currentUserContext";
 
 const ProfileTabs = () => {
+  const { currentUserId } = useCurrentUser();
   return (
     <div className={`mt-4 d-flex gap-5 ${styles["profile-tabs"]}`}>
       <NavLink
-        to="/Homepage/profile"
+        to={`/Homepage/${currentUserId?.userName || "defaultUser"}`}
         className={({ isActive }) =>
           `d-flex gap-2 ${styles["profile-tab"]} ${
             isActive ? styles["profile-tab-active"] : ""

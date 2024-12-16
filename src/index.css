@@ -110,7 +110,7 @@ textarea::placeholder {
   font-weight: 600;
 }
 
-.paddingLeftProfileUl {
+.containerPostsProfile {
   padding-left: 0px !important;
 }
 
@@ -152,5 +152,19 @@ media
 @media screen and (max-width: 764px) {
   .bottomBar {
     display: block !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .profileContainer {
+    /* margin-left: 20% !important; */
+  }
+
+  .containerPostsProfile {
+    max-width: 65rem !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .containerPostsProfile {
+    max-width: 40rem !important;
   }
 }

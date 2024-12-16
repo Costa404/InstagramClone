@@ -41,7 +41,7 @@ export const useMenuOptions = () => {
     {
       name: "Create",
       icon: <CiSquarePlus className="fs-2" />,
-      path: "/Create",
+      path: "/createPost",
     },
     {
       name: "Dashboard",
@@ -56,7 +56,7 @@ export const useMenuOptions = () => {
           style={{ width: "2.4rem", height: "2.4rem" }}
         />
       ),
-      path: `/homepage/${currentUserId?.userName}`, //
+      path: `/Homepage/${currentUserId?.userName}`, //
     },
   ];
 

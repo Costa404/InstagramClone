@@ -51,7 +51,7 @@ export const useAppRoutes = () => {
       errorElement: <CustomErrorPage />,
     },
     {
-      path: `/create`,
+      path: `/createPost`,
       element: <LazyCreatePost />,
       errorElement: <CustomErrorPage />,
     },
