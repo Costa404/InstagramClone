@@ -32,11 +32,12 @@ const ProfileDetails = ({
 
   const isUserFollowing = user?.userName && isFollowing[user.userName] === true;
 
-  // console.log("userId:", user.userName);
-  // console.log("isFollowing:", isFollowing);
+  console.log("userId:", user.userName);
+  console.log("isFollowing:", isFollowing);
 
-  // // console.log("selectedUser:", selectedUser);
-  // console.log("isUserFollowing:", isUserFollowing);
+  console.log("selectedUser:", selectedUser);
+  console.log("isCurrentUser:", isCurrentUser);
+  console.log("isUserFollowing:", isUserFollowing);
 
   if (!displayUser) return null;
 

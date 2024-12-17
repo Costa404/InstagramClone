@@ -10,7 +10,8 @@ import { useCurrentUser } from "../../../useContext/currentUserContext/currentUs
 
 const BottomBar = () => {
   const { currentUserId } = useCurrentUser();
-  const { selectedUser } = useSelectedUser();
+  const { selectedUser, setSelectedUser } = useSelectedUser();
+  setSelectedUser(currentUserId);
   return (
     <div
       className="position-fixed w-100 bg-black bottomBar"

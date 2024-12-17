@@ -5,16 +5,18 @@ import { useSelectedUser } from "../../../../useContext/SelectedUserContext";
 import { useHandleStatus } from "../../../../SharedComponents/Followers/Followlogic/FollowingStatus/useHandleStatus";
 import { useHandleUnfollow } from "../../../../SharedComponents/Followers/UnfollowLogic/useHandleUnfollow";
 import InputProfileImg from "./ProfileImage/InputProfileImg";
+import { useCurrentUser } from "../../../../useContext/currentUserContext/currentUserContext";
 
 const HeaderProfile = () => {
   const { selectedUser } = useSelectedUser();
+  const { currentUserId } = useCurrentUser();
   const { handleUnfollowInner } = useHandleUnfollow();
   // const { handleFollowInner } = useHandleFollow();
   const { handleFollowClick } = useHandleStatus();
 
   console.log("selectedUser", selectedUser);
 
-  if (!selectedUser) return;
+  if (!currentUserId) return;
 
   return (
     <section className="mt-5 w-100 d-flex gap-5 flex-column border-bottom border-dark w100Mobile">
@@ -23,7 +25,7 @@ const HeaderProfile = () => {
 
         <ProfileDetails
           onFollowClick={handleFollowClick}
-          user={selectedUser}
+          user={currentUserId}
           onUnfollowClick={handleUnfollowInner}
         />
       </div>
