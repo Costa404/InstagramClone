@@ -6,15 +6,19 @@ import { getStorage } from "firebase/storage";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC2-QH7MNS8p-nRf15QYJuVo5bauYXiXDA",
+  apiKey: "AIzaSyCCI5Y2h6ww5L2mpSNE_bVbI7bHGakrgmI",
 
-  authDomain: "instagramclone-4cb2a.firebaseapp.com",
-  projectId: "instagramclone-4cb2a",
-  storageBucket: "instagramclone-4cb2a.firebasestorage.app",
+  authDomain: "mysocialnetwork-960dc.firebaseapp.com",
 
-  messagingSenderId: "279507432998",
-  appId: "1:279507432998:web:fa039610bf891828c818e7",
-  measurementId: "G-28QNNC2D79",
+  projectId: "mysocialnetwork-960dc",
+
+  storageBucket: "mysocialnetwork-960dc.firebasestorage.app",
+
+  messagingSenderId: "16898638835",
+
+  appId: "1:16898638835:web:26f3c9f7d36be1bc338886",
+
+  measurementId: "G-0GDGX83XJE",
 };
 
 const app = initializeApp(firebaseConfig);
