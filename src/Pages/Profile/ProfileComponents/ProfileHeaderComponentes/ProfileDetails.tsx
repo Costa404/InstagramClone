@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { IoIosSettings } from "react-icons/io";
 import ActionButtons from "./ActionButtons";
 import { BsThreeDots } from "react-icons/bs";
@@ -19,9 +20,15 @@ const ProfileDetails = ({
   user,
 }: ProfileDetailsProps) => {
   const { currentUserId } = useCurrentUser();
-  const { selectedUser } = useSelectedUser();
+  const { selectedUser, setSelectedUser } = useSelectedUser();
   const { countPosts } = useGetNumberPosts();
   const { isFollowing } = useIsFollowing();
+
+  useEffect(() => {
+    if (!selectedUser) {
+      setSelectedUser(currentUserId);
+    }
+  }, [selectedUser, currentUserId, setSelectedUser]);
 
   const displayUser =
     selectedUser === currentUserId ? currentUserId : selectedUser;
@@ -32,17 +39,16 @@ const ProfileDetails = ({
 
   const isUserFollowing = user?.userName && isFollowing[user.userName] === true;
 
+  console.log("selectedUser:", selectedUser);
   console.log("userId:", user.userName);
   console.log("isFollowing:", isFollowing);
-
-  console.log("selectedUser:", selectedUser);
   console.log("isCurrentUser:", isCurrentUser);
   console.log("isUserFollowing:", isUserFollowing);
 
   if (!displayUser) return null;
 
   return (
-    <div className="d-flex flex-column w-75 justify-content-center gap-5 profileHeaderContainer ">
+    <div className="d-flex flex-column w-100 justify-content-center gap-5 profileHeaderContainer ">
       <div className="d-flex profileHeaderSubContainer gap-4 fw-bold align-items-center">
         <h3>{displayUser?.userName}</h3>
         <ActionButtons

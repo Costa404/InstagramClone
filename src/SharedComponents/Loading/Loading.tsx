@@ -7,7 +7,10 @@ const LoadingSpinner = () => {
       className="d-flex justify-content-center flex-column align-items-md-center w-100 h-100"
       style={{ minHeight: "100vh" }}
     >
-      <div className="d-flex align-items-end" style={{ minHeight: "50vh" }}>
+      <div
+        className="d-flex  justify-content-center align-items-end"
+        style={{ minHeight: "50vh" }}
+      >
         {" "}
         <img src={intagramLogo} style={{ width: "20rem" }} alt="" />
       </div>

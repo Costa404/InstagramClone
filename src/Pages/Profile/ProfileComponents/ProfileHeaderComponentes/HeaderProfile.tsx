@@ -19,8 +19,11 @@ const HeaderProfile = () => {
   if (!currentUserId) return;
 
   return (
-    <section className="mt-5 w-100 d-flex gap-5 flex-column border-bottom border-dark w100Mobile">
-      <div className="d-flex w-100 gap-5" style={{ height: "60%" }}>
+    <section className="mt-5 w-75 d-flex gap-5 flex-column border-bottom border-dark  w100Mobile">
+      <div
+        className="d-flex w-100 gap-5 justify-content-center"
+        style={{ height: "60%" }}
+      >
         <InputProfileImg />
 
         <ProfileDetails

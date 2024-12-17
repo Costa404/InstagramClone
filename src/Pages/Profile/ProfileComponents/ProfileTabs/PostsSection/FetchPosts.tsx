@@ -8,8 +8,8 @@ import { useParams } from "react-router-dom";
 export const useFetchPosts = () => {
   const { currentUserId } = useCurrentUser();
   const [posts, setPosts] = useState<PostData[] | undefined>(undefined);
-  const { username } = useParams();
-  console.log("username", username);
+  const { userName } = useParams();
+  console.log("username", userName);
   useEffect(() => {
     const fetchPostsFirebase = async () => {
       if (!currentUserId) {
@@ -24,7 +24,7 @@ export const useFetchPosts = () => {
 
       try {
         const postRef = collection(db, "posts");
-        const q = query(postRef, where("userName", "==", username));
+        const q = query(postRef, where("userName", "==", userName));
         const querySnapShot = await getDocs(q);
 
         console.log(
@@ -57,7 +57,7 @@ export const useFetchPosts = () => {
     };
 
     fetchPostsFirebase();
-  }, [username]);
+  }, [userName]);
 
   return { posts };
 };

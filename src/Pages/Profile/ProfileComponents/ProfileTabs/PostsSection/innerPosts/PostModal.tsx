@@ -25,7 +25,11 @@ const PostModal = ({
       <img
         src={selectedPost.imageUrl}
         alt="Post"
-        style={{ maxWidth: "69.6rem" }}
+        style={{
+          maxWidth: "69.6rem",
+          objectFit: "cover",
+          objectPosition: "center",
+        }}
       />
       <div style={{ width: "40rem" }}>
         <div className="d-flex justify-content-between align-items-center border-bottom border-dark p-3">
