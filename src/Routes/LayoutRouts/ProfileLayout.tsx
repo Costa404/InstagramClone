@@ -5,9 +5,9 @@ import ContentProfile from "../../Pages/Profile/ProfileComponents/ContentProfile
 
 const ProfileLayout = () => {
   return (
-    <div className="app-layout w-100  ">
+    <div className="app-layout w-100   " style={{ height: "85vh" }}>
       <div
-        className="main-content h-100 d-flex align-items-center flex-column  flex-grow-1 w-100 profileContainer"
+        className="main-content h-100 d-flex align-items-center flex-column   flex-grow-1 w-100 profileContainer"
         // style={{ marginLeft: "5%" }}
       >
         <ContentProfile />

@@ -3,7 +3,7 @@ import ProfileTabs from "./ProfileTabs/ProfileTabs";
 
 const ContentProfile = () => {
   return (
-    <div className="d-flex flex-column align-items-center w100Mobile">
+    <div className="d-flex flex-column align-items-center w-50  w100Mobile">
       <HeaderProfile />
       <ProfileTabs />
     </div>

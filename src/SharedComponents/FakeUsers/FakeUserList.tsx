@@ -1,20 +1,21 @@
-import { useEffect, useState } from "react";
-import { fetchUsersFromFirebase } from "./FetchFakeUsers";
-import { User } from "../Interface/Interface";
+// import { useEffect, useState } from "react";
+// import { fetchUsersFromFirebase } from "./FetchFakeUsers";
+// import { User } from "../Interface/Interface";
+// import { useFakeUsers } from "../../useContext/fakeUsers/FakeUsersContext";
 
-const UserList = () => {
-  const [fakeUsers, setFakeUsers] = useState<User[]>([]);
+// const UserList = () => {
+//   const { fakeUsers, setFakeUsers } = useFakeUsers();
 
-  useEffect(() => {
-    const loadUsers = async () => {
-      const fetchedUsers: User[] = await fetchUsersFromFirebase();
-      setFakeUsers(fetchedUsers);
-    };
+//   useEffect(() => {
+//     const loadUsers = async () => {
+//       const fetchedUsers: User[] = await fetchUsersFromFirebase();
+//       setFakeUsers(fetchedUsers);
+//     };
 
-    loadUsers();
-  }, []);
+//     loadUsers();
+//   }, []);
 
-  return { fakeUsers };
-};
+//   return { fakeUsers };
+// };
 
-export default UserList;
+// export default UserList;

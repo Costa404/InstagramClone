@@ -1,6 +1,6 @@
 const Footer = ({ textColor = "text-dark" }) => {
   return (
-    <section className="justify-content-center d-flex  flex-column flex-wrap my-5 w-100">
+    <section className="justify-content-center d-flex  flex-column flex-wrap my-5 w-100 footerDisplayNoneMobile">
       <nav className="d-flex   ">
         <div className="container-fluid  d-flex w-100">
           <ul

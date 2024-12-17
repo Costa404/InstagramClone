@@ -153,6 +153,9 @@ media
   .bottomBar {
     display: block !important;
   }
+  .footerDisplayNoneMobile {
+    display: none !important;
+  }
 
   .profileHeaderSubContainer {
     flex-direction: column !important;
@@ -181,8 +184,8 @@ media
     max-width: 65rem !important;
   } */
 }
-@media screen and (max-width: 700px) {
+/* @media screen and (max-width: 700px) {
   .containerPostsProfile {
     max-width: 40rem !important;
   }
-}
+} */

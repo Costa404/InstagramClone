@@ -17,7 +17,7 @@ const HeaderProfile = () => {
   if (!selectedUser) return;
 
   return (
-    <section className="mt-5  d-flex gap-5 flex-column border-bottom border-dark w100Mobile">
+    <section className="mt-5 w-100 d-flex gap-5 flex-column border-bottom border-dark w100Mobile">
       <div className="d-flex w-100 gap-5" style={{ height: "60%" }}>
         <InputProfileImg />
 

@@ -24,7 +24,7 @@ export const FakeUserProvider: React.FC<FakeUserProviderProps> = ({
     };
 
     loadFakeUsers();
-  }, []);
+  }, [fakeUsers]);
 
   return (
     <UserContext.Provider value={fakeUsers}>{children}</UserContext.Provider>
