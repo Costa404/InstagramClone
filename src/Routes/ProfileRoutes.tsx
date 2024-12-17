@@ -25,7 +25,7 @@ const profileRoutes = [
 ];
 
 const ProfileRoutes = {
-  path: ":username",
+  path: ":userName",
   element: <ProfileLayout />,
   errorElement: <CustomErrorPage />,
   children: profileRoutes,

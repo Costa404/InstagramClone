@@ -12,7 +12,7 @@ const ProfileTabs = () => {
   return (
     <div className={`mt-4 d-flex gap-5 ${styles["profile-tabs"]}`}>
       <NavLink
-        to={`/Homepage/${currentUserId?.userName || "defaultUser"}`}
+        to={`/Homepage/${currentUserId?.userName}`}
         className={({ isActive }) =>
           `d-flex gap-2 ${styles["profile-tab"]} ${
             isActive ? styles["profile-tab-active"] : ""
