@@ -1,9 +1,11 @@
 import { FaRegHeart } from "react-icons/fa";
 import { generateUsers } from "./generateUsers";
 import { TitleWithAlternateColor } from "./TitleWithAlternateColor";
+import useLogout from "../../../../Authentication/Logout/useLogout";
 
 const UpperContent = () => {
   const users = generateUsers(8);
+  const { handleLogOut } = useLogout();
 
   return (
     <section className="w-100">
@@ -11,6 +13,7 @@ const UpperContent = () => {
         {" "}
         <TitleWithAlternateColor title1="For You " title2="Following" />
         <FaRegHeart
+          onClick={handleLogOut}
           className="fs-1 iconNotificationsMobile"
           style={{ display: "none" }}
         />
