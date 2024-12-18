@@ -10,7 +10,7 @@ const Homepage = () => {
 
   return (
     <section
-      className="container-fluid  d-flex justify-content-center     "
+      className="  d-flex justify-content-center     "
       style={{
         maxWidth: "100vw",
         minHeight: "100vh",

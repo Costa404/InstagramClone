@@ -1,8 +1,8 @@
-import style from "../../../Pages/Homepage/Frontend/Homepage.module.css";
+import style from "../../../../Pages/Homepage/Frontend/Homepage.module.css";
 import { FaInstagram } from "react-icons/fa";
-import blackTitle from "../../../assets/black-title.png";
-import whiteTitle from "../../../assets/white-title.png";
-import { useTheme } from "../../../useContext/ThemeContext/ThemeContext";
+import blackTitle from "../../../../assets/black-title.png";
+import whiteTitle from "../../../../assets/white-title.png";
+import { useTheme } from "../../../../useContext/ThemeContext/ThemeContext";
 
 const SidebarHeader = () => {
   const { theme } = useTheme();

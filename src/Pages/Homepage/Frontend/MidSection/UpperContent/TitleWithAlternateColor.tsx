@@ -22,7 +22,7 @@ export const TitleWithAlternateColor: React.FC<TitleProps> = ({
   };
 
   return (
-    <div className="d-flex fw-medium gap-3 pt-4">
+    <div className="d-flex fw-medium gap-3 ">
       <h3
         className={`py-4 mb-2 ${getTextClass(activeDiv === "div1")}`}
         onClick={() => setActiveDiv("div1")}

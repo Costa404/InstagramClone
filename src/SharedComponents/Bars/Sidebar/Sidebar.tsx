@@ -1,6 +1,6 @@
 import MenuList from "./SidebarComponents/MenuList";
 import SidebarHeader from "./SidebarComponents/SidebarHeader";
-import styleHomepage from "../../Pages/Homepage/Frontend/Homepage.module.css";
+import styleHomepage from "../../../Pages/Homepage/Frontend/Homepage.module.css";
 import LowerSidebar from "./SidebarComponents/LowerSidebar/LowerSidebar";
 
 const Sidebar = () => {

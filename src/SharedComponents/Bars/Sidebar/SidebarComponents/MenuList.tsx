@@ -1,9 +1,10 @@
+import { useCurrentUser } from "../../../../useContext/currentUserContext/currentUserContext";
+import { useSelectedUser } from "../../../../useContext/SelectedUserContext";
 import MenuOption from "./MenuOption";
 import { useMenuOptions } from "./menuOptions";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useSelectedUser } from "../../../useContext/SelectedUserContext";
-import { useCurrentUser } from "../../../useContext/currentUserContext/currentUserContext";
+
 // import { useToggleCreatePostClick } from "../../createPost/createPostToggle/useToggleCreatePostClick";
 // import CreatePostToggle from "../../createPost/createPostToggle/CreatePostToggle";
 

@@ -175,6 +175,14 @@ media
   .versionDesktopProfileStats {
     display: none !important;
   }
+
+  .iconNotificationsMobile {
+    display: block !important;
+  }
+
+  .topBarProfile {
+    display: block !important;
+  }
 }
 @media screen and (max-width: 1000px) {
   .createPostBackgroundWidth {

@@ -1,7 +1,7 @@
 import { HiAtSymbol } from "react-icons/hi";
 import { ToggleMenu } from "./TogleMenu/ToggleMenu";
-import style from "../../../../Pages/Homepage/Frontend/Homepage.module.css";
-import { useTheme } from "../../../../useContext/ThemeContext/ThemeContext";
+import style from "../../../../../Pages/Homepage/Frontend/Homepage.module.css";
+import { useTheme } from "../../../../../useContext/ThemeContext/ThemeContext";
 
 const LowerSidebar = () => {
   const { theme } = useTheme();

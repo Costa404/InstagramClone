@@ -5,11 +5,10 @@ import { IoIosStats } from "react-icons/io";
 import { LuSend } from "react-icons/lu";
 import { IoSearchSharp } from "react-icons/io5";
 import { GoHomeFill } from "react-icons/go";
-
-import { useCurrentUser } from "../../../useContext/currentUserContext/currentUserContext";
-import { saveFakeUsersToFirebase } from "../../FakeUsers/saveFakeUsersFirebase";
-import ProfileImg from "../../../Pages/Profile/ProfileComponents/ProfileHeaderComponentes/ProfileImage/ProfileImg";
-import { useSelectedUser } from "../../../useContext/SelectedUserContext";
+import { useCurrentUser } from "../../../../useContext/currentUserContext/currentUserContext";
+import { useSelectedUser } from "../../../../useContext/SelectedUserContext";
+import ProfileImg from "../../../../Pages/Profile/ProfileComponents/ProfileHeaderComponentes/ProfileImage/ProfileImg";
+import { saveFakeUsersToFirebase } from "../../../FakeUsers/saveFakeUsersFirebase";
 
 export const useMenuOptions = () => {
   const { currentUserId } = useCurrentUser();

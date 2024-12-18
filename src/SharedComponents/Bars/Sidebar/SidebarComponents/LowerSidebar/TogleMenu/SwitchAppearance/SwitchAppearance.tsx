@@ -1,6 +1,6 @@
 import { FaChevronLeft } from "react-icons/fa";
 import { MdOutlineLightMode } from "react-icons/md";
-import { useTheme } from "../../../../../../useContext/ThemeContext/ThemeContext";
+import { useTheme } from "../../../../../../../useContext/ThemeContext/ThemeContext";
 
 type SwitchAppearanceProps = {
   closeMainDiv: () => void;

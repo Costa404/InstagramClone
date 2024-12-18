@@ -10,11 +10,7 @@ const UploadProfileImg = () => {
     useProfileImage();
 
   return (
-    <div
-      onClick={handleImageClick}
-      className="d-flex "
-      style={{ paddingLeft: "3rem" }}
-    >
+    <div onClick={handleImageClick} className="d-flex ">
       <input
         type="file"
         accept="image/*"

@@ -4,11 +4,11 @@ import { FaBars, FaRegBookmark } from "react-icons/fa";
 import { GoMoon } from "react-icons/go";
 import { ImStatsDots } from "react-icons/im";
 import { IoIosSettings } from "react-icons/io";
-import style from "../../../../../Pages/Homepage/Frontend/Homepage.module.css";
+import style from "../../../../../../Pages/Homepage/Frontend/Homepage.module.css";
 import SwitchAppearance from "./SwitchAppearance/SwitchAppearance";
 import { useToggle } from "./SwitchAppearance/useToggle";
-import { useTheme } from "../../../../../useContext/ThemeContext/ThemeContext";
-import useLogout from "../../../../../Pages/Authentication/Logout/useLogout";
+import { useTheme } from "../../../../../../useContext/ThemeContext/ThemeContext";
+import useLogout from "../../../../../../Pages/Authentication/Logout/useLogout";
 
 export const ToggleMenu = () => {
   const { theme } = useTheme();

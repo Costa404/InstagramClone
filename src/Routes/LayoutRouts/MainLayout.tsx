@@ -1,9 +1,10 @@
 // src/components/MainLayout.tsx
 
 import { Outlet } from "react-router-dom";
-import Sidebar from "../../SharedComponents/Sidebar/Sidebar";
+
 import Footer from "../../Pages/Authentication/SharedComponentes/Footer";
-import BottomBar from "../../SharedComponents/Sidebar/BottomBar/BottomBar";
+import Sidebar from "../../SharedComponents/Bars/Sidebar/Sidebar";
+import BottomBar from "../../SharedComponents/Bars/BottomBar/BottomBar";
 
 const MainLayout = () => (
   <div

@@ -20,7 +20,7 @@ const ActionButtons: React.FC<ActionButtonsProps> = ({
   return (
     <div>
       {isCurrentUser ? (
-        <div className="d-flex gap-5 flex-wrap">
+        <div className="d-flex gap-1 flex-wrap">
           <span>
             <a
               href="#"

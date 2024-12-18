@@ -1,6 +1,6 @@
 import React from "react";
-import style from "../../../Pages/Homepage/Frontend/Homepage.module.css";
-import { useTheme } from "../../../useContext/ThemeContext/ThemeContext";
+import style from "../../../../Pages/Homepage/Frontend/Homepage.module.css";
+import { useTheme } from "../../../../useContext/ThemeContext/ThemeContext";
 
 interface MenuOptionProps {
   name: string;
