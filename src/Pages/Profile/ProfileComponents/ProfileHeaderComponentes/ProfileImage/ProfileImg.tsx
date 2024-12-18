@@ -6,6 +6,7 @@ type ProfileImageProps = {
   userId: string; // ID do usuário para buscar a imagem
   style?: React.CSSProperties; // Estilo opcional para customizar a imagem
   onClick?: MouseEventHandler<HTMLDivElement>;
+  className?: string;
 };
 
 const ProfileImg: React.FC<ProfileImageProps> = ({
@@ -49,7 +50,7 @@ const ProfileImg: React.FC<ProfileImageProps> = ({
       {profileImageUrl ? (
         <img
           src={profileImageUrl}
-          className="hover pictureProfile"
+          className="hover profilePictureWidthMobile"
           alt="Profile"
           data-testid="cypress-Profile"
           style={{

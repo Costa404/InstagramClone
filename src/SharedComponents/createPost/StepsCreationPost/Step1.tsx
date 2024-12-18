@@ -34,7 +34,7 @@ const Step1: React.FC<Step1Props> = ({ nextStep, setSelectedImg }) => {
           height: "80vh",
           width: "40%",
         }}
-        className=" d-flex flex-column justify-content-center gap-5 align-items-center "
+        className=" d-flex flex-column justify-content-center gap-5 align-items-center createPostBackgroundWidth  "
       >
         <GoFileMedia
           className="fs-1"

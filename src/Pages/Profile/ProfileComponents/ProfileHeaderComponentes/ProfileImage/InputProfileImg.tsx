@@ -26,6 +26,7 @@ const UploadProfileImg = () => {
       <ProfileImg
         userId={selectedUser?.userName as string}
         style={{ width: "15rem", height: "15rem" }}
+        className="profilePictureWidthMobile"
       />
 
       {/* <img

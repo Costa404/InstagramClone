@@ -1,4 +1,3 @@
-import FixedStorys from "./FixedStorys";
 import ProfileDetails from "./ProfileDetails";
 
 import { useSelectedUser } from "../../../../useContext/SelectedUserContext";
@@ -6,6 +5,8 @@ import { useHandleStatus } from "../../../../SharedComponents/Followers/Followlo
 import { useHandleUnfollow } from "../../../../SharedComponents/Followers/UnfollowLogic/useHandleUnfollow";
 import InputProfileImg from "./ProfileImage/InputProfileImg";
 import { useCurrentUser } from "../../../../useContext/currentUserContext/currentUserContext";
+import FixedStorys from "./logicProfile/FixedStorys";
+import ProfileStats from "./logicProfile/ProfileStats";
 
 const HeaderProfile = () => {
   const { selectedUser } = useSelectedUser();
@@ -33,6 +34,7 @@ const HeaderProfile = () => {
         />
       </div>
       <FixedStorys />
+      <ProfileStats className="versionMobileProfileStats justify-content-between py-3 px-5 border-top border-dark" />
     </section>
   );
 };

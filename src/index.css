@@ -163,29 +163,27 @@ media
     align-items: start !important;
   }
 
-  .profileHeaderContainer {
-  }
-
   .w100Mobile {
     width: 100% !important;
   }
 
-  /* .pictureProfile {
+  /* .profilePictureWidthMobile {
     width: 7.7rem !important;
     height: 7.7rem !important;
   } */
+
+  .versionDesktopProfileStats {
+    display: none !important;
+  }
 }
 @media screen and (max-width: 1000px) {
-  .profileContainer {
-    /* margin-left: 20% !important; */
+  .createPostBackgroundWidth {
+    width: 100% !important;
   }
-  /* 
-  .containerPostsProfile {
-    max-width: 65rem !important;
-  } */
 }
-/* @media screen and (max-width: 700px) {
-  .containerPostsProfile {
-    max-width: 40rem !important;
+
+@media screen and (min-width: 764px) {
+  .versionMobileProfileStats {
+    display: none !important;
   }
-} */
+}

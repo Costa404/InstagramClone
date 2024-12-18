@@ -1,6 +1,6 @@
-import { User } from "../../../../SharedComponents/Interface/Interface";
-import BtnFollowandUnfollow from "../../../../SharedComponents/Followers/BtnFollowAndUnfollow";
-import style from "../../Profile.module.css";
+import { User } from "../../../../../SharedComponents/Interface/Interface";
+import BtnFollowandUnfollow from "../../../../../SharedComponents/Followers/BtnFollowAndUnfollow";
+import style from "../../../Profile.module.css";
 
 interface ActionButtonsProps {
   user: User;
@@ -20,7 +20,7 @@ const ActionButtons: React.FC<ActionButtonsProps> = ({
   return (
     <div>
       {isCurrentUser ? (
-        <div className="d-flex gap-3">
+        <div className="d-flex gap-5 flex-wrap">
           <span>
             <a
               href="#"

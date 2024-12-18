@@ -1,12 +1,12 @@
-import { useEffect } from "react";
 import { IoIosSettings } from "react-icons/io";
-import ActionButtons from "./ActionButtons";
+import ActionButtons from "./logicProfile/ActionButtons";
 import { BsThreeDots } from "react-icons/bs";
-import { useCurrentUser } from "../../../../useContext/currentUserContext/currentUserContext";
-import { useSelectedUser } from "../../../../useContext/SelectedUserContext";
-import { User } from "../../../../SharedComponents/Interface/Interface";
-import { useGetNumberPosts } from "./logicProfile/getNumberPosts";
+
 import { useIsFollowing } from "../../../../useContext/IsFollowingContext/IsFollowingContext";
+import ProfileStats from "./logicProfile/ProfileStats";
+import { User } from "../../../../SharedComponents/Interface/Interface";
+import { useCurrentUser } from "../../../../useContext/currentUserContext/currentUserContext";
+import useDisplayUser from "./logicProfile/useDisplayUser";
 
 interface ProfileDetailsProps {
   onFollowClick: (userId: string) => void;
@@ -19,27 +19,14 @@ const ProfileDetails = ({
   onUnfollowClick,
   user,
 }: ProfileDetailsProps) => {
-  const { currentUserId } = useCurrentUser();
-  const { selectedUser, setSelectedUser } = useSelectedUser();
-  const { countPosts } = useGetNumberPosts();
+  const { displayUser } = useDisplayUser();
   const { isFollowing } = useIsFollowing();
+  const { currentUserId } = useCurrentUser();
 
-  useEffect(() => {
-    if (!selectedUser) {
-      setSelectedUser(currentUserId);
-    }
-  }, [selectedUser, currentUserId, setSelectedUser]);
-
-  const displayUser =
-    selectedUser === currentUserId ? currentUserId : selectedUser;
-
-  const followingCount = displayUser?.following?.length || 0;
-
-  const isCurrentUser = selectedUser?.userId === currentUserId?.userId;
-
+  const isCurrentUser = displayUser?.userId === currentUserId?.userId;
   const isUserFollowing = user?.userName && isFollowing[user.userName] === true;
 
-  console.log("selectedUser:", selectedUser);
+  console.log("displayUser:", displayUser);
   console.log("userId:", user.userName);
   console.log("isFollowing:", isFollowing);
   console.log("isCurrentUser:", isCurrentUser);
@@ -58,14 +45,12 @@ const ProfileDetails = ({
           isCurrentUser={isCurrentUser}
         />
         {isUserFollowing ? (
-          <>
-            <button
-              className=" px-4 rounded-3 fs-5 fw-semibold border-0 focus-ring-0 btn-secondary"
-              style={{ height: "3.2rem", width: "10rem" }}
-            >
-              Message
-            </button>
-          </>
+          <button
+            className=" px-4 rounded-3 fs-5 fw-semibold border-0 focus-ring-0 btn-secondary"
+            style={{ height: "3.2rem", width: "10rem" }}
+          >
+            Message
+          </button>
         ) : null}
         {isCurrentUser ? (
           <IoIosSettings className="fs-1" />
@@ -73,11 +58,7 @@ const ProfileDetails = ({
           <BsThreeDots className="fs-1" />
         )}
       </div>
-      <div className="fw-semibold d-flex gap-5">
-        <span className="fs-4">{countPosts} posts</span>
-        <span className="fs-4">{displayUser?.followersCount} Followers</span>
-        <span className="fs-4">{followingCount} Following</span>
-      </div>
+      <ProfileStats className="versionDesktopProfileStats" />
       <h3>{displayUser?.fullName}</h3>
     </div>
   );
