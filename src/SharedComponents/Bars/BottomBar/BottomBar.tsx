@@ -7,7 +7,7 @@ import { GoHomeFill } from "react-icons/go";
 import ProfileImg from "../../../Pages/Profile/ProfileComponents/ProfileHeaderComponentes/ProfileImage/ProfileImg";
 import { Link } from "react-router-dom";
 import { useCurrentUser } from "../../../useContext/currentUserContext/currentUserContext";
-import { useEffect } from "react";
+
 import { useSelectedUser } from "../../../useContext/SelectedUserContext";
 
 const BottomBar = () => {
