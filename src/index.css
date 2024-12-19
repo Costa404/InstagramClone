@@ -183,6 +183,14 @@ media
   .topBarProfile {
     display: block !important;
   }
+
+  .widthSuggestUsers {
+    width: 90vw !important;
+  }
+
+  .titleContainerSuggestUsers {
+    width: 100% !important;
+  }
 }
 @media screen and (max-width: 1000px) {
   .createPostBackgroundWidth {

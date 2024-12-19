@@ -6,15 +6,14 @@ import { TitleWithAlternateColor } from "../Frontend/MidSection/UpperContent/Tit
 const UsersDispaly: React.FC = () => {
   return (
     <section
-      className=" d-flex flex-column align-items-center w-100 "
+      className=" d-flex flex-column align-items-center w-100  "
       style={{
         minHeight: "100vh",
-        marginLeft: "33.5rem",
       }}
     >
       <div
-        className="  border-bottom border-dark mb-5 pt-5 "
-        style={{ width: "90%" }}
+        className="   border-bottom border-dark mb-5 pt-5 titleContainerSuggestUsers "
+        style={{ width: "60%" }}
       >
         <TitleWithAlternateColor title1="Suggested for you" />
       </div>

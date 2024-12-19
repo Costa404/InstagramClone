@@ -1,11 +1,17 @@
 import { FaRegHeart } from "react-icons/fa";
 import { generateUsers } from "./generateUsers";
 import { TitleWithAlternateColor } from "./TitleWithAlternateColor";
-import useLogout from "../../../../Authentication/Logout/useLogout";
+
+import { useNavigate } from "react-router-dom";
 
 const UpperContent = () => {
   const users = generateUsers(8);
-  const { handleLogOut } = useLogout();
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/notifications");
+  };
 
   return (
     <section className="w-100">
@@ -13,7 +19,7 @@ const UpperContent = () => {
         {" "}
         <TitleWithAlternateColor title1="For You " title2="Following" />
         <FaRegHeart
-          onClick={handleLogOut}
+          onClick={handleClick}
           className="fs-1 iconNotificationsMobile"
           style={{ display: "none" }}
         />

@@ -11,7 +11,7 @@ const PostList = ({
     <ul
       className="d-flex gap-2 mt-3 h-100 containerPostsProfile "
       style={{
-        flexWrap: "wrap", // Permite quebra de linha
+        flexWrap: "wrap",
         maxWidth: "93.3rem",
       }}
     >
@@ -19,9 +19,9 @@ const PostList = ({
         <li
           key={`${post.userId}-${post.createdAt}`}
           style={{
-            flex: "1 1 calc(33.33% - 1rem)", // Espaço dinâmico para 3 itens por linha
+            flex: "1 1 calc(33.33% - 1rem)",
             listStyle: "none",
-            boxSizing: "border-box", // Garante que padding/borders não alterem o tamanho
+            boxSizing: "border-box",
           }}
           className="hover"
         >
@@ -29,9 +29,9 @@ const PostList = ({
             src={post.imageUrl}
             alt={post.description || "Post image"}
             style={{
-              width: "100%", // Responsivo: usa 100% do espaço do contêiner
-              height: "auto", // Mantém proporção da imagem
-              objectFit: "cover", // Ajusta a imagem para ocupar o espaço
+              width: "100%",
+              height: "auto",
+              objectFit: "cover",
             }}
             onClick={() => onPostSelect(post)}
           />

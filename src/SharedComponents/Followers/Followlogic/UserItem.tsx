@@ -19,7 +19,7 @@ const UserItem: FC<UserItemProps> = ({
   return (
     <section
       key={user.userName}
-      className="d-flex justify-content-between align-items-center"
+      className="d-flex justify-content-between align-items-center widthSuggestUsers"
       style={{ width: "60rem", marginBottom: "1.5rem" }}
     >
       <div className="d-flex gap-3">

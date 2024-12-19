@@ -27,6 +27,10 @@ const LazySuggestionUsers = React.lazy(
 const LazyCreatePost = React.lazy(
   () => import("../SharedComponents/createPost/CreatePost.tsx")
 );
+
+const LazyNotifications = React.lazy(
+  () => import("../Pages/Notifications/Notifications.tsx")
+);
 export const useAppRoutes = () => {
   const { currentUserId } = useCurrentUser();
   return createBrowserRouter([
@@ -53,6 +57,11 @@ export const useAppRoutes = () => {
     {
       path: `/createPost`,
       element: <LazyCreatePost />,
+      errorElement: <CustomErrorPage />,
+    },
+    {
+      path: `/notifications`,
+      element: <LazyNotifications />,
       errorElement: <CustomErrorPage />,
     },
     {
