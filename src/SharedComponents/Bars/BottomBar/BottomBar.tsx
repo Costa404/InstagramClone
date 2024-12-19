@@ -7,9 +7,17 @@ import { GoHomeFill } from "react-icons/go";
 import ProfileImg from "../../../Pages/Profile/ProfileComponents/ProfileHeaderComponentes/ProfileImage/ProfileImg";
 import { Link } from "react-router-dom";
 import { useCurrentUser } from "../../../useContext/currentUserContext/currentUserContext";
+import { useEffect } from "react";
+import { useSelectedUser } from "../../../useContext/SelectedUserContext";
 
 const BottomBar = () => {
   const { currentUserId } = useCurrentUser();
+  console.log("currentUserId", currentUserId);
+  const { setSelectedUser } = useSelectedUser();
+
+  const handleProfileClick = () => {
+    setSelectedUser(currentUserId);
+  };
 
   return (
     <div
@@ -27,7 +35,10 @@ const BottomBar = () => {
           <CiSquarePlus className="fs-1" />
         </Link>
         <LuSend className="fs-1" />
-        <Link to={`/Homepage/${currentUserId?.userName}`}>
+        <Link
+          to={`/Homepage/${currentUserId?.userName}`}
+          onClick={handleProfileClick}
+        >
           <ProfileImg
             userId={currentUserId?.userName as string}
             style={{ width: "2.4rem", height: "2.4rem" }}
