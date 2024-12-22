@@ -53,7 +53,7 @@ const ProfileDetails = ({
           </button>
         ) : null}
         {isCurrentUser ? (
-          <IoIosSettings className="fs-1" />
+          <IoIosSettings className="fs-1 logoSettingsProfile" />
         ) : (
           <BsThreeDots className="fs-1" />
         )}

@@ -22,7 +22,6 @@ const MainLayout = () => (
       <div
         className="d-flex justify-content-center  w-100
       "
-        style={{ marginLeft: "15%" }}
       >
         <Footer />
       </div>

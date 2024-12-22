@@ -31,6 +31,8 @@ const LazyCreatePost = React.lazy(
 const LazyNotifications = React.lazy(
   () => import("../Pages/Notifications/Notifications.tsx")
 );
+const LazyMessages = React.lazy(() => import("../Pages/Messages/Messages.tsx"));
+
 export const useAppRoutes = () => {
   const { currentUserId } = useCurrentUser();
   return createBrowserRouter([
@@ -64,6 +66,11 @@ export const useAppRoutes = () => {
       element: <LazyNotifications />,
       errorElement: <CustomErrorPage />,
     },
+    // {
+    //   path: `/messages`,
+    //   element: <LazyMessages />,
+    //   errorElement: <CustomErrorPage />,
+    // },
     {
       path: "/Homepage",
       element: <MainLayout />,
@@ -76,6 +83,12 @@ export const useAppRoutes = () => {
         {
           path: "allUsers",
           element: <LazyAllUsers />,
+        },
+
+        {
+          path: `messages`,
+          element: <LazyMessages />,
+          errorElement: <CustomErrorPage />,
         },
         ProfileRoutes,
       ],

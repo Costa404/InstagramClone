@@ -191,6 +191,13 @@ media
   .titleContainerSuggestUsers {
     width: 100% !important;
   }
+
+  .logoSettingsProfile {
+    display: none !important;
+  }
+  .containerPostsProfile {
+    min-width: 100% !important;
+  }
 }
 @media screen and (max-width: 1000px) {
   .createPostBackgroundWidth {

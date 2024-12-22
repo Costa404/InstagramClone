@@ -12,7 +12,7 @@ const PostList = ({
       className="d-flex gap-2 mt-3 h-100 containerPostsProfile "
       style={{
         flexWrap: "wrap",
-        maxWidth: "93.3rem",
+        maxWidth: "56%",
       }}
     >
       {posts.map((post) => (
@@ -20,6 +20,11 @@ const PostList = ({
           key={`${post.userId}-${post.createdAt}`}
           style={{
             flex: "1 1 calc(33.33% - 1rem)",
+            maxWidth: "calc(33.33% - 1rem)",
+            minWidth: "calc(33.33% - 1rem)", // Mantém o tamanho mínimo
+            // maxHeight: "34.8rem",
+            // minHeight: "34.8rem",
+            height: "34.8rem",
             listStyle: "none",
             boxSizing: "border-box",
           }}
@@ -30,8 +35,8 @@ const PostList = ({
             alt={post.description || "Post image"}
             style={{
               width: "100%",
-              height: "auto",
-              objectFit: "cover",
+              height: "100%",
+              objectFit: "fill",
             }}
             onClick={() => onPostSelect(post)}
           />

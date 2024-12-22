@@ -31,7 +31,11 @@ export const useMenuOptions = () => {
       path: "/explore",
     },
     { name: "Reels", icon: <BsCameraReels className="fs-2" />, path: "/reels" },
-    { name: "Messages", icon: <LuSend className="fs-2" />, path: "/messages" },
+    {
+      name: "Messages",
+      icon: <LuSend className="fs-2" />,
+      path: "/homepage/messages",
+    },
     {
       name: "Notifications",
       icon: <FaRegHeart className="fs-2" />,

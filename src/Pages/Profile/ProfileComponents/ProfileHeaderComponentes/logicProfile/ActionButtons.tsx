@@ -20,22 +20,32 @@ const ActionButtons: React.FC<ActionButtonsProps> = ({
   return (
     <div>
       {isCurrentUser ? (
-        <div className="d-flex gap-1 flex-wrap">
+        <div className="d-flex gap-2 flex-wrap ">
           <span>
-            <a
-              href="#"
-              className={` ${style.btnProfileHeader}  rounded-3 p-3 px-4 `}
+            <button
+              className={` ${style.btnProfileHeader}  rounded-3 fw-bold`}
+              style={{
+                width: "10rem",
+                height: "3rem",
+                border: "none",
+                color: "white",
+              }}
             >
               Edit Profile
-            </a>
+            </button>
           </span>
           <span>
-            <a
-              href="#"
-              className={` ${style.btnProfileHeader}  rounded-3 p-3 px-4 `}
+            <button
+              className={` ${style.btnProfileHeader}  rounded-3 fw-bold  `}
+              style={{
+                width: "10rem",
+                height: "3rem",
+                border: "none",
+                color: "white",
+              }}
             >
               View Archive
-            </a>
+            </button>
           </span>
         </div>
       ) : (

@@ -31,7 +31,7 @@ const UserItem: FC<UserItemProps> = ({
           className="rounded-circle hover"
         />
         <div className="d-flex flex-column">
-          <h1 onClick={() => onClick?.(user)} className="fs-4 text-white">
+          <h1 onClick={() => onClick?.(user)} className="fs-4 text-white hover">
             {user.userName}
           </h1>
           <p style={{ color: "#a8a8a8" }}>{user.fullName}</p>

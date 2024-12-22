@@ -22,17 +22,19 @@ const TopBarProfile = () => {
     >
       {isCurrentUser ? (
         <div className="p-3 d-flex justify-content-between align-items-center position-fixed w-100 border-bottom border-dark">
-          <IoIosSettings className="fs-1" />
+          <IoIosSettings className="fs-1 hover" />
           <span className="d-flex gap-2 align-items-center fs-3">
             {currentUserId?.userName} <FaChevronDown />
           </span>
-          <FaThreads className="fs-2" />
+          <FaThreads className="fs-2 hover" />
         </div>
       ) : (
         <div className="p-3 d-flex justify-content-between align-items-center position-fixed w-100 border-bottom border-dark">
           <IoArrowBackOutline className="fs-2 hover" onClick={handleClick} />
           <p className="fs-2 mb-0">{displayUser?.userName}</p>
-          <IoIosRefresh className="fs-2 hover" />
+          <span className="hover">
+            <IoIosRefresh className="fs-2 hover" />
+          </span>
         </div>
       )}
     </section>

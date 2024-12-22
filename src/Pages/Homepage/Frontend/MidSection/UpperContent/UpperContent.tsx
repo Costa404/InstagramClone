@@ -20,7 +20,7 @@ const UpperContent = () => {
         <TitleWithAlternateColor title1="For You " title2="Following" />
         <FaRegHeart
           onClick={handleClick}
-          className="fs-1 iconNotificationsMobile"
+          className="fs-1 iconNotificationsMobile hover"
           style={{ display: "none" }}
         />
       </div>
