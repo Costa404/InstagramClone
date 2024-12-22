@@ -4,7 +4,6 @@ import { doc, setDoc } from "firebase/firestore";
 import { useError } from "../../../../../useContext/errorContext/useError";
 import { auth, db } from "../../../../../firebase";
 import { useSignupProvider } from "../../../../../useContext/useSignupContext/useSignupCredentialsContext";
-import createPostsForExistingFakeUsers from "../../../../Homepage/FeedFakePosts/createPostsForExistingFakeUsers ";
 
 const useSignupLogic = () => {
   const { emailSignup, passwordSignup, userNameSignup, fullNameSignup } =
