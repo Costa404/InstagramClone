@@ -19,6 +19,33 @@
   }
 }
 
+/* =================================
+
+messages
+
+================================= */
+
+.message-sidebar {
+  max-width: 7.2rem !important;
+}
+
+.message-sidebar .listOptionsSideBar {
+  display: none !important;
+}
+
+.message-sidebar .miniLogo {
+  display: block !important;
+}
+
+.message-sidebar .logoInstagram {
+  display: none;
+}
+
+/* =================================
+
+messages
+
+================================= */
 .active {
   color: dark;
 }
@@ -52,6 +79,7 @@
     padding-left: 10px;
   }
 }
+
 @media screen and (max-width: 1160px) {
   .rightSection {
     display: none !important;

@@ -26,7 +26,6 @@ const ProfileImg: React.FC<ProfileImageProps> = ({
           return;
         }
 
-        // // Busca a URL da imagem no Firebase
         const url = await getProfileImage();
 
         if (url) {

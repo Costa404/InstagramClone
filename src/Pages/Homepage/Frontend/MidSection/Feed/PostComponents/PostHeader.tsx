@@ -14,11 +14,16 @@ type PostHeaderProps = {
   followersCount?: number;
   followingCount?: number;
   postsCount?: number;
+
+  // user: User;
+  // onClick?: (user: User) => void;
 };
 
 const PostHeader: React.FC<PostHeaderProps> = ({
   userName,
   createdAt,
+  // onClick,
+  // user,
   // fullName,
   // bio,
   // followersCount,
@@ -55,10 +60,11 @@ const PostHeader: React.FC<PostHeaderProps> = ({
         <ProfileImg
           userId={currentUserId?.profileImg as string}
           style={{ width: "3.2rem", height: "3.2rem" }}
+          // onClick={() => onClick?.(user)}
         />
 
         <div className="d-flex gap-3 align-items-center justify-content-between gap-l-3  ms-1">
-          <Card.Title style={{ fontWeight: "600" }} className="px-3">
+          <Card.Title style={{ fontWeight: "600" }} className="px-3 hover">
             {userName}
           </Card.Title>
           <div className=" text-center">

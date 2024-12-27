@@ -198,6 +198,11 @@ media
   .containerPostsProfile {
     min-width: 100% !important;
   }
+
+  .messagesContainer {
+    margin-left: 0px !important;
+    width: 100px !important;
+  }
 }
 @media screen and (max-width: 1000px) {
   .createPostBackgroundWidth {

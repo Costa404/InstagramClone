@@ -12,7 +12,7 @@ const PostList = ({
       className="d-flex gap-2 mt-3 h-100 containerPostsProfile "
       style={{
         flexWrap: "wrap",
-        maxWidth: "56%",
+        minWidth: "56%",
       }}
     >
       {posts.map((post) => (
@@ -21,7 +21,7 @@ const PostList = ({
           style={{
             flex: "1 1 calc(33.33% - 1rem)",
             maxWidth: "calc(33.33% - 1rem)",
-            minWidth: "calc(33.33% - 1rem)", // Mantém o tamanho mínimo
+            minWidth: "calc(33.33% - 1rem)",
             // maxHeight: "34.8rem",
             // minHeight: "34.8rem",
             height: "34.8rem",

@@ -29,7 +29,7 @@ export const useFollowUser = () => {
 
     try {
       if (!currentUserId?.email) {
-        console.error("Email do usuário não está definido");
+        console.error("Email user undefined");
         return;
       }
 
